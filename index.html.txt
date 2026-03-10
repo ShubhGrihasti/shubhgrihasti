@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Shubh Grihasti | Home Cleaning & Maid Services Bangalore</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Shubh Grihasti provides professional home cleaning, maid services and home help services across Bangalore. Book trusted cleaning services today.">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:#000;
+color:white;
+text-align:center;
+padding:8px;
+font-size:14px;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:500px;
+background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin:10px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.button{
+background:#ff6600;
+padding:14px 28px;
+color:white;
+text-decoration:none;
+margin-top:20px;
+border-radius:6px;
+font-weight:bold;
+}
+
+/* SECTION */
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+/* SERVICES GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:40px 60px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* BOOKING */
+
+.booking{
+background:#f4f4f4;
+padding:70px 20px;
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+background:#fafafa;
+padding:70px 20px;
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+Professional Home Cleaning & Maid Services in Bangalore
+</div>
+
+<nav>
+
+<h2>Shubh Grihasti</h2>
+
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<div class="hero">
+
+<h1>Trusted Home Services in Bangalore</h1>
+
+<p>Cleaning • Maid Services • Home Help</p>
+
+<a class="button" href="https://wa.me/918095918091">Book on WhatsApp</a>
+
+</div>
+
+<div class="section" id="services">
+
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Home Cleaning</h3>
+<p>Deep cleaning services for apartments and houses.</p>
+</div>
+
+<div class="card">
+<h3>Maid Services</h3>
+<p>Reliable maid services for daily household help.</p>
+</div>
+
+<div class="card">
+<h3>Sofa Cleaning</h3>
+<p>Professional sofa and upholstery cleaning.</p>
+</div>
+
+<div class="card">
+<h3>Kitchen Cleaning</h3>
+<p>Deep cleaning to keep your kitchen hygienic.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="section" id="about">
+
+<h2>Home Services Across Bangalore</h2>
+
+<p>
+Shubh Grihasti provides professional cleaning and maid services across Bangalore.
+Our trained staff ensures your home stays clean, organized and comfortable.
+</p>
+
+<p>
+Areas we serve include Whitefield, Marathahalli, Indiranagar, HSR Layout,
+Electronic City, Sarjapur Road and nearby locations.
+</p>
+
+</div>
+
+<div class="booking">
+
+<h2>Book Our Service Today</h2>
+
+<p>Fast, professional, and trusted home services.</p>
+
+<a class="button" href="https://wa.me/918095918091">Book Service</a>
+
+</div>
+
+<div class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Bangalore, Karnataka</p>
+
+<p>📞 +91 80959 18091</p>
+
+<p>📧 support@shubhgrihasti.com</p>
+
+</div>
+
+<footer>
+
+<p>© 2026 Shubh Grihasti</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918095918091">
+WhatsApp
+</a>
+
+</body>
+</html>
