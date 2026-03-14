@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Shubh Grihasthi | Domestic Services Bangalore</title>
+<title>Shubh Grihasthi | Trusted Domestic Help in Bangalore</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,6 +12,7 @@ body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:#333;
+background:#fafafa;
 }
 
 /* NAVBAR */
@@ -20,11 +21,12 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
+padding:18px 60px;
 background:white;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
+z-index:100;
 }
 
 .logo{
@@ -39,73 +41,75 @@ align-items:center;
 }
 
 nav a{
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
 color:#333;
 font-weight:bold;
 }
 
 .phone{
-margin-left:20px;
+margin-left:25px;
+color:#0a8a3a;
 font-weight:bold;
-color:#0f7a33;
 }
 
 .bookbtn{
 background:#ff6a00;
 color:white;
-padding:10px 20px;
+padding:10px 22px;
 border-radius:6px;
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
+font-weight:bold;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:60px;
-background:#f9f9f9;
+padding:70px 60px;
+background:white;
 }
 
 .hero-text{
-width:50%;
+width:48%;
 }
 
 .hero-text h1{
-font-size:40px;
-color:#0f7a33;
+font-size:42px;
+color:#0a8a3a;
+margin-bottom:10px;
 }
 
 .hero-text p{
 font-size:18px;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .service-buttons{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:10px;
+gap:12px;
 }
 
 .service-buttons div{
 background:#ff6a00;
 color:white;
-padding:12px;
+padding:14px;
 border-radius:6px;
 text-align:center;
 font-weight:bold;
 }
 
 .hero-img{
-width:45%;
+width:48%;
 }
 
 .hero-img img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 }
 
 /* SECTION */
@@ -115,11 +119,15 @@ padding:70px 60px;
 text-align:center;
 }
 
-/* SERVICE GRID */
+.section h2{
+color:#0a8a3a;
+}
+
+/* GRID */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:25px;
 margin-top:40px;
 }
@@ -127,14 +135,18 @@ margin-top:40px;
 .card{
 background:white;
 padding:25px;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* WHY SECTION */
+.card h3{
+color:#ff6a00;
+}
+
+/* WHY */
 
 .why{
-background:#f2fff4;
+background:#f3fff6;
 padding:70px 60px;
 }
 
@@ -142,12 +154,43 @@ padding:70px 60px;
 font-size:17px;
 }
 
+/* BOOKING FORM */
+
+form{
+max-width:500px;
+margin:auto;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ddd;
+}
+
+button{
+background:#ff6a00;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* MAP */
+
+.map{
+padding:70px 60px;
+}
+
 /* CONTACT */
 
 .contact{
-background:#fafafa;
-padding:70px 60px;
 text-align:center;
+padding:70px 60px;
+background:#fafafa;
 }
 
 /* FOOTER */
@@ -157,6 +200,21 @@ background:#111;
 color:white;
 text-align:center;
 padding:25px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -180,7 +238,7 @@ padding:25px;
 
 <div class="phone">📞 8095918091</div>
 
-<a class="bookbtn" href="https://wa.me/918095918091">Book Now</a>
+<a class="bookbtn" href="#booking">Book Now</a>
 
 </div>
 
@@ -194,7 +252,7 @@ padding:25px;
 
 <h1>Trusted Home Services in Bangalore</h1>
 
-<p>Click below to book domestic help services.</p>
+<p>Click below to book domestic help services</p>
 
 <div class="service-buttons">
 
@@ -211,13 +269,13 @@ padding:25px;
 
 <div class="hero-img">
 
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
 
 </div>
 
 </div>
 
-<!-- OUR SERVICES -->
+<!-- SERVICES -->
 
 <div class="section" id="services">
 
@@ -227,27 +285,27 @@ padding:25px;
 
 <div class="card">
 <h3>Maid Services</h3>
-<p>Reliable and experienced maids for daily household work.</p>
+<p>Reliable maids for daily household cleaning and chores.</p>
 </div>
 
 <div class="card">
 <h3>Cooking Services</h3>
-<p>Professional home cooks for daily meal preparation.</p>
+<p>Experienced home cooks available for daily meal preparation.</p>
 </div>
 
 <div class="card">
 <h3>Driver Services</h3>
-<p>Verified drivers available for personal and family needs.</p>
+<p>Verified drivers for personal and family transportation.</p>
 </div>
 
 <div class="card">
 <h3>Baby Care</h3>
-<p>Caring and experienced nannies to look after your children.</p>
+<p>Caring nannies to support childcare and babysitting.</p>
 </div>
 
 <div class="card">
 <h3>Elderly Care</h3>
-<p>Compassionate support and care for senior citizens.</p>
+<p>Compassionate caregivers for senior citizen assistance.</p>
 </div>
 
 <div class="card">
@@ -276,7 +334,7 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 
 </div>
 
-<!-- WHY US -->
+<!-- WHY -->
 
 <div class="why">
 
@@ -292,6 +350,76 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 
 </div>
 
+<!-- TESTIMONIALS -->
+
+<div class="section">
+
+<h2>What Our Customers Say</h2>
+
+<div class="grid">
+
+<div class="card">
+<p>"Very reliable maid service. Staff was polite and professional."</p>
+<b>- Priya, Whitefield</b>
+</div>
+
+<div class="card">
+<p>"Found a good cook through Shubh Grihasthi. Smooth process."</p>
+<b>- Ramesh, HSR Layout</b>
+</div>
+
+<div class="card">
+<p>"Great elderly care service. Highly recommended."</p>
+<b>- Anita, Marathahalli</b>
+</div>
+
+</div>
+
+</div>
+
+<!-- BOOKING FORM -->
+
+<div class="section" id="booking">
+
+<h2>Book a Service</h2>
+
+<form onsubmit="sendToWhatsapp(); return false;">
+
+<input id="name" placeholder="Your Name" required>
+
+<input id="phone" placeholder="Phone Number" required>
+
+<select id="service">
+<option>Maid</option>
+<option>Cook</option>
+<option>Driver</option>
+<option>Baby Care</option>
+<option>Elderly Care</option>
+<option>Watchman</option>
+</select>
+
+<textarea id="message" placeholder="Additional details"></textarea>
+
+<button>Submit Booking</button>
+
+</form>
+
+</div>
+
+<!-- MAP -->
+
+<div class="map">
+
+<h2 style="text-align:center;color:#0a8a3a;">Service Area</h2>
+
+<iframe src="https://www.google.com/maps?q=bangalore&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:10px;">
+</iframe>
+
+</div>
+
 <!-- CONTACT -->
 
 <div class="contact" id="contact">
@@ -302,11 +430,9 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 
 <p>📞 Phone: 8095918091</p>
 
-<p>📧 Email: support@shubhgrihasthi.com</p>
+<p>📧 support@shubhgrihasthi.com</p>
 
 <p>🕒 Business Hours: 8 AM – 8 PM</p>
-
-<a class="bookbtn" href="https://wa.me/918095918091">Book on WhatsApp</a>
 
 </div>
 
@@ -315,6 +441,27 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 © 2026 Shubh Grihasthi
 
 </footer>
+
+<a class="whatsapp" href="https://wa.me/918095918091">
+WhatsApp
+</a>
+
+<script>
+
+function sendToWhatsapp(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var service=document.getElementById("service").value;
+var message=document.getElementById("message").value;
+
+var text="New Booking:%0AName: "+name+"%0APhone: "+phone+"%0AService: "+service+"%0AMessage: "+message;
+
+window.open("https://wa.me/918095918091?text="+text,'_blank');
+
+}
+
+</script>
 
 </body>
 </html>
