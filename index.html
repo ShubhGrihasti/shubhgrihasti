@@ -1,9 +1,10 @@
-
+```html
 <!DOCTYPE html>
 <html>
 <head>
 
 <title>ShubhGrihasti | Domestic Help Bangalore</title>
+
 <link rel="icon" type="image/png" href="favicon.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +24,6 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
 padding:18px 60px;
 background:black;
 border-bottom:2px solid #ff2a2a;
@@ -36,7 +36,6 @@ height:55px;
 .nav-right{
 display:flex;
 align-items:center;
-flex-wrap:wrap;
 }
 
 nav a{
@@ -53,13 +52,22 @@ font-weight:bold;
 }
 
 .bookbtn{
-background:#ff3b3b;
+background:#ff2a2a;
 color:white;
 padding:10px 20px;
 border-radius:6px;
 margin-left:25px;
 text-decoration:none;
 font-weight:bold;
+}
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:#ffd700;
+cursor:pointer;
 }
 
 /* HERO */
@@ -113,7 +121,7 @@ width:100%;
 border-radius:12px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
 padding:80px 60px;
@@ -172,7 +180,7 @@ color:white;
 font-size:18px;
 }
 
-/* BOOKING FORM */
+/* FORM */
 
 form{
 max-width:500px;
@@ -226,7 +234,7 @@ padding:25px;
 border-top:2px solid #ff2a2a;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -242,17 +250,37 @@ box-shadow:0 4px 10px rgba(0,0,0,0.4);
 width:30px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:768px){
 
 nav{
+flex-wrap:wrap;
 padding:20px;
 }
 
+.menu-toggle{
+display:block;
+}
+
 .nav-right{
+display:none;
+flex-direction:column;
+width:100%;
+margin-top:15px;
+}
+
+.nav-right a,
+.phone{
+margin:10px 0;
+}
+
+.bookbtn{
 margin-top:10px;
-justify-content:center;
+}
+
+.nav-right.active{
+display:flex;
 }
 
 .hero{
@@ -261,10 +289,7 @@ padding:50px 20px;
 text-align:center;
 }
 
-.hero-text{
-width:100%;
-}
-
+.hero-text,
 .hero-img{
 width:100%;
 }
@@ -291,14 +316,6 @@ width:100%;
 height:auto;
 }
 
-.map{
-padding:50px 20px;
-}
-
-.contact{
-padding:60px 20px;
-}
-
 }
 
 </style>
@@ -315,7 +332,9 @@ padding:60px 20px;
 <img src="logo.jpeg">
 </div>
 
-<div class="nav-right">
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="nav-right" id="navMenu">
 
 <a href="#">Home</a>
 <a href="#services">Services</a>
@@ -365,7 +384,6 @@ padding:60px 20px;
 <form onsubmit="sendToWhatsapp(); return false;">
 
 <input id="name2" placeholder="Your Name" required>
-
 <input id="phone2" placeholder="Phone Number" required>
 
 <select id="service2">
@@ -401,15 +419,15 @@ padding:60px 20px;
 </div>
 
 <div class="card">
-<img src="image2.jfif">
+<img src="image2.jpg">
 <div>
 <h3>Cooking Services</h3>
-<p>Experienced cooks for delicious and hygienic home meals.</p>
+<p>Experienced cooks for delicious home meals.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="driver.jfif">
+<img src="driver.jpg">
 <div>
 <h3>Driver Services</h3>
 <p>Verified drivers available for personal transportation.</p>
@@ -417,7 +435,7 @@ padding:60px 20px;
 </div>
 
 <div class="card">
-<img src="baby.jfif">
+<img src="baby.jpg">
 <div>
 <h3>Baby Care</h3>
 <p>Professional nannies to take care of your children.</p>
@@ -425,7 +443,7 @@ padding:60px 20px;
 </div>
 
 <div class="card">
-<img src="ES.jpg">
+<img src="elder.jpg">
 <div>
 <h3>Elderly Care</h3>
 <p>Compassionate caregivers for senior citizen support.</p>
@@ -475,7 +493,6 @@ Our mission is to make home life easier for busy families by providing reliable 
 <form onsubmit="sendToWhatsapp(); return false;">
 
 <input id="name" placeholder="Your Name" required>
-
 <input id="phone" placeholder="Phone Number" required>
 
 <select id="service">
@@ -498,7 +515,7 @@ Our mission is to make home life easier for busy families by providing reliable 
 
 <div class="map">
 
-<h2 style="color:#ff3b3b;">Service Area</h2>
+<h2 style="text-align:center;color:#ff3b3b;">Service Area</h2>
 
 <iframe src="https://www.google.com/maps?q=bangalore&output=embed"
 width="100%"
@@ -531,6 +548,11 @@ style="border:0;border-radius:10px;">
 
 <script>
 
+function toggleMenu(){
+var menu=document.getElementById("navMenu");
+menu.classList.toggle("active");
+}
+
 function sendToWhatsapp(){
 
 var name=document.getElementById("name").value || document.getElementById("name2").value;
@@ -548,3 +570,4 @@ window.open("https://wa.me/918095918091?text="+text,'_blank');
 
 </body>
 </html>
+```
