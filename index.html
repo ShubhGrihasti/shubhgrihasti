@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Shubhgrihasti | Trusted Domestic Help in Bangalore</title>
+<title>Shubh Grihasti | Domestic Help Bangalore</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,9 +10,9 @@
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-color:#333;
-background:#fafafa;
+font-family:Georgia, serif;
+background:#000;
+color:#ffd700;
 }
 
 /* NAVBAR */
@@ -22,18 +22,27 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 60px;
-background:white;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
-z-index:100;
+background:black;
+border-bottom:2px solid #ff2a2a;
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#ff6a00;
+.logo-area{
+display:flex;
+align-items:center;
 }
+
+.logo-area img{
+height:55px;
+margin-right:15px;
+}
+
+.logo-text{
+font-size:28px;
+font-weight:bold;
+color:#ffd700;
+}
+
+/* NAV LINKS */
 
 .nav-right{
 display:flex;
@@ -43,18 +52,18 @@ align-items:center;
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:#333;
+color:#ffd700;
 font-weight:bold;
 }
 
 .phone{
 margin-left:25px;
-color:#0a8a3a;
+color:#ff3b3b;
 font-weight:bold;
 }
 
 .bookbtn{
-background:#ff6a00;
+background:#ff3b3b;
 color:white;
 padding:10px 22px;
 border-radius:6px;
@@ -69,8 +78,7 @@ font-weight:bold;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:70px 60px;
-background:white;
+padding:80px 60px;
 }
 
 .hero-text{
@@ -78,17 +86,17 @@ width:48%;
 }
 
 .hero-text h1{
-font-size:42px;
-color:#0a8a3a;
-margin-bottom:10px;
+font-size:44px;
+color:#ffd700;
 }
 
 .hero-text p{
 font-size:18px;
+color:white;
 margin-bottom:25px;
 }
 
-/* SERVICE BUTTONS */
+/* QUICK SERVICES */
 
 .service-buttons{
 display:grid;
@@ -97,7 +105,7 @@ gap:12px;
 }
 
 .service-buttons div{
-background:#ff6a00;
+background:#ff2a2a;
 color:white;
 padding:14px;
 border-radius:6px;
@@ -116,15 +124,16 @@ width:100%;
 border-radius:12px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
-padding:70px 60px;
+padding:80px 60px;
 text-align:center;
 }
 
 .section h2{
-color:#0a8a3a;
+color:#ff3b3b;
+font-size:34px;
 }
 
 /* SERVICE GRID */
@@ -132,30 +141,47 @@ color:#0a8a3a;
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
+gap:30px;
 margin-top:40px;
 }
 
 .card{
-background:white;
-padding:25px;
+background:#111;
+padding:20px;
 border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
+border:1px solid #222;
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
 }
 
 .card h3{
-color:#ff6a00;
+color:#ffd700;
+}
+
+.card p{
+color:white;
 }
 
 /* WHY */
 
 .why{
-background:#f3fff6;
-padding:70px 60px;
+background:#0d0d0d;
+padding:80px 60px;
 text-align:center;
 }
 
-/* BOOKING FORM */
+.why p{
+color:white;
+font-size:18px;
+}
+
+/* BOOKING */
 
 form{
 max-width:500px;
@@ -167,11 +193,11 @@ width:100%;
 padding:12px;
 margin:10px 0;
 border-radius:6px;
-border:1px solid #ddd;
+border:none;
 }
 
 button{
-background:#ff6a00;
+background:#ff2a2a;
 color:white;
 border:none;
 padding:14px 25px;
@@ -183,27 +209,32 @@ cursor:pointer;
 /* MAP */
 
 .map{
-padding:70px 60px;
+padding:80px 60px;
 }
 
 /* CONTACT */
 
 .contact{
 text-align:center;
-padding:70px 60px;
-background:#fafafa;
+padding:80px 60px;
+background:#0d0d0d;
+}
+
+.contact p{
+color:white;
 }
 
 /* FOOTER */
 
 footer{
-background:#111;
-color:white;
+background:black;
+color:#ffd700;
 text-align:center;
 padding:25px;
+border-top:2px solid #ff2a2a;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -215,7 +246,6 @@ padding:15px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -224,9 +254,17 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
-<div class="logo">Shubhgrihasti</div>
+<div class="logo-area">
+
+<img src="logo.png">
+
+<div class="logo-text">Shubh Grihasti</div>
+
+</div>
 
 <div class="nav-right">
 
@@ -249,9 +287,9 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 
 <div class="hero-text">
 
-<h1>Trusted Home Services in Bangalore</h1>
+<h1>Trusted Domestic Help in Bangalore</h1>
 
-<p>Book domestic help services</p>
+<p>Reliable maid, cooking, childcare and elderly care services.</p>
 
 <div class="service-buttons">
 
@@ -260,7 +298,6 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 <div>Driver</div>
 <div>Baby Care</div>
 <div>Elderly Care</div>
-<div>Watchman</div>
 
 </div>
 
@@ -283,33 +320,33 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 <div class="grid">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 <h3>Maid Services</h3>
-<p>Reliable maids for daily household cleaning and chores.</p>
+<p>Trusted household helpers for cleaning and daily chores.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
 <h3>Cooking Services</h3>
-<p>Experienced home cooks for daily meal preparation.</p>
+<p>Experienced cooks for delicious and hygienic home meals.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
 <h3>Driver Services</h3>
-<p>Verified drivers for family and personal needs.</p>
+<p>Verified drivers available for personal transportation.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 <h3>Baby Care</h3>
-<p>Caring nannies for childcare and babysitting support.</p>
+<p>Professional nannies to take care of your children.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
 <h3>Elderly Care</h3>
-<p>Compassionate caregivers for senior citizen assistance.</p>
-</div>
-
-<div class="card">
-<h3>Watchman</h3>
-<p>Reliable watchman services for residential security.</p>
+<p>Compassionate caregivers for senior citizen support.</p>
 </div>
 
 </div>
@@ -323,12 +360,11 @@ box-shadow:0 4px 12px rgba(0,0,0,0.3);
 <h2>Domestic Services Across Bangalore</h2>
 
 <p>
-Shubhgrihasti provides domestic household services across all areas of Bangalore.
-We help families find trusted help for cleaning, cooking, childcare and elderly care.
+Shubh Grihasti provides trusted domestic help across Bangalore including maid services, cooking services, childcare and elderly care.
 </p>
 
 <p>
-Our goal is to make home life easier for busy Bangalore citizens looking for reliable household support.
+Our mission is to make home life easier for busy families by providing reliable and verified household staff.
 </p>
 
 </div>
@@ -337,40 +373,13 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 
 <div class="why">
 
-<h2>Why Choose Shubhgrihasti?</h2>
+<h2>Why Choose Shubh Grihasti?</h2>
 
 <p>✔ Flexible pricing based on your needs</p>
 <p>✔ Flexible work hours</p>
 <p>✔ Experienced and trusted domestic workers</p>
-<p>✔ Aadhar ID verification done before hiring staff</p>
+<p>✔ Aadhar ID verification before hiring staff</p>
 <p>✔ Friendly and reliable service</p>
-
-</div>
-
-<!-- TESTIMONIALS -->
-
-<div class="section">
-
-<h2>What Our Customers Say</h2>
-
-<div class="grid">
-
-<div class="card">
-<p>"Very reliable maid service. Staff was polite and professional."</p>
-<b>- Priya, Whitefield</b>
-</div>
-
-<div class="card">
-<p>"Found a good cook through Shubhgrihasti. Smooth process."</p>
-<b>- Ramesh, HSR Layout</b>
-</div>
-
-<div class="card">
-<p>"Great elderly care service. Highly recommended."</p>
-<b>- Anita, Marathahalli</b>
-</div>
-
-</div>
 
 </div>
 
@@ -392,7 +401,6 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 <option>Driver</option>
 <option>Baby Care</option>
 <option>Elderly Care</option>
-<option>Watchman</option>
 </select>
 
 <textarea id="message" placeholder="Additional details"></textarea>
@@ -407,7 +415,7 @@ Our goal is to make home life easier for busy Bangalore citizens looking for rel
 
 <div class="map">
 
-<h2 style="text-align:center;color:#0a8a3a;">Service Area</h2>
+<h2 style="text-align:center;color:#ff3b3b;">Service Area</h2>
 
 <iframe src="https://www.google.com/maps?q=bangalore&output=embed"
 width="100%"
@@ -421,21 +429,18 @@ style="border:0;border-radius:10px;">
 
 <div class="contact" id="contact">
 
-<h2>Contact Us</h2>
+<h2 style="color:#ff3b3b;">Contact Us</h2>
 
 <p>📍 Service Area: All Over Bangalore</p>
-
 <p>📞 Phone: 8095918091</p>
-
 <p>📧 support@shubhgrihasthi.com</p>
-
 <p>🕒 Business Hours: 8 AM – 8 PM</p>
 
 </div>
 
 <footer>
 
-© 2026 Shubhgrihasti
+© 2026 Shubh Grihasti
 
 </footer>
 
