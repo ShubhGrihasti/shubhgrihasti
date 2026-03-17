@@ -1,27 +1,21 @@
-```html
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
-<title>ShubhGrihasti | Maid & Domestic Help Services in Bangalore</title>
+<title>Shubh Grihasti | Domestic Support Services in Bangalore</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description" content="ShubhGrihasti provides trusted maid services, cooks, babysitters and elderly care across Bangalore. Verified domestic help with quick booking.">
-
-<meta name="keywords" content="maid services Bangalore, cook Bangalore, babysitter Bangalore, domestic help Bangalore">
-
-<link rel="icon" href="favicon.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
-background:#EAF6FF;
-color:#333;
+font-family:Georgia, serif;
+background:#000;
+color:#ffd700;
 }
 
 /* NAVBAR */
@@ -32,18 +26,48 @@ justify-content:space-between;
 align-items:center;
 padding:18px 60px;
 background:black;
-border-bottom:2px solid #ff7a18;
+border-bottom:2px solid #ff2a2a;
 }
 
 .logo-area img{
-height:75px;
+height:55px;
+}
+
+.nav-right{
+display:flex;
+align-items:center;
 }
 
 nav a{
-color:#ffd700;
 margin-left:25px;
 text-decoration:none;
-font-weight:500;
+color:#ffd700;
+font-weight:bold;
+}
+
+.phone{
+margin-left:25px;
+color:#ff3b3b;
+font-weight:bold;
+}
+
+.bookbtn{
+background:#ff2a2a;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+margin-left:25px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:#ffd700;
+cursor:pointer;
 }
 
 /* HERO */
@@ -53,6 +77,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:80px 60px;
+gap:40px;
 }
 
 .hero-text{
@@ -60,40 +85,40 @@ width:50%;
 }
 
 .hero-text h1{
-font-size:40px;
-color:#0F2A44;
+font-size:42px;
+color:#ffd700;
 }
 
 .hero-text p{
 font-size:18px;
-margin-bottom:20px;
-}
-
-.hero-buttons a{
-padding:14px 24px;
-border-radius:8px;
-margin-right:12px;
-text-decoration:none;
 color:white;
-font-weight:500;
+margin-bottom:25px;
 }
 
-.callbtn{
-background:#FF7A18;
+.service-buttons{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
 }
 
-.whatsappbtn{
-background:#25D366;
-}
-
-/* TRUST STRIP */
-
-.trust-strip{
-background:#0F2A44;
+.service-buttons div{
+background:#ff2a2a;
 color:white;
+padding:14px;
+border-radius:6px;
 text-align:center;
-padding:15px;
-font-size:15px;
+font-weight:bold;
+}
+
+/* HERO IMAGE */
+
+.hero-img{
+width:50%;
+}
+
+.hero-img img{
+width:100%;
+border-radius:12px;
 }
 
 /* SECTION */
@@ -101,74 +126,58 @@ font-size:15px;
 .section{
 padding:80px 60px;
 text-align:center;
-background:#F6FAFF;
 }
 
 .section h2{
-color:#0F2A44;
+color:#ff3b3b;
+font-size:34px;
 }
 
 /* SERVICES */
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:flex;
+flex-direction:column;
 gap:25px;
 margin-top:40px;
 }
 
 .card{
-background:white;
-padding:22px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* PROCESS */
-
-.process{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.step{
-background:white;
-padding:20px;
-border-radius:10px;
-border-left:5px solid #0077CC;
-}
-
-/* TESTIMONIALS */
-
-.testimonial-wrapper{
 display:flex;
+align-items:center;
 gap:20px;
-overflow-x:auto;
-margin-top:40px;
-}
-
-.testimonial{
-min-width:280px;
-background:white;
+background:#111;
 padding:20px;
 border-radius:10px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
+border:1px solid #222;
 }
 
-/* AREAS */
+.card img{
+width:220px;
+height:140px;
+object-fit:cover;
+border-radius:8px;
+}
 
-.areas{
-columns:3;
-text-align:left;
-margin-top:30px;
-font-size:16px;
+.card h3{
+color:#ffd700;
+}
+
+.card p{
+color:white;
+}
+
+/* WHY */
+
+.why{
+background:#0d0d0d;
+padding:80px 60px;
+text-align:center;
+}
+
+.why p{
+color:white;
+font-size:18px;
 }
 
 /* FORM */
@@ -183,53 +192,36 @@ width:100%;
 padding:14px;
 margin:10px 0;
 border-radius:6px;
-border:1px solid #ccc;
+border:none;
+font-size:16px;
 }
 
-/* CALL FAST */
-
-.callfast{
-color:#FF7A18;
-font-weight:600;
-animation:glow 1.5s infinite alternate;
-}
-
-@keyframes glow{
-from{ text-shadow:0 0 5px #FF7A18;}
-to{ text-shadow:0 0 20px #FF7A18;}
-}
-
-/* FLOAT BUTTONS */
-
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-padding:16px;
-border-radius:50%;
-box-shadow:0 0 18px #25D366;
-animation:whatsappGlow 1.5s infinite alternate;
-}
-
-.whatsapp-float img{
-width:30px;
-}
-
-.call-float{
-position:fixed;
-bottom:100px;
-right:25px;
-background:#FF7A18;
-padding:16px;
-border-radius:50%;
+button{
+background:#ff2a2a;
 color:white;
-font-size:20px;
+border:none;
+padding:14px 25px;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
 }
 
-@keyframes whatsappGlow{
-from{box-shadow:0 0 10px #25D366;}
-to{box-shadow:0 0 25px #25D366;}
+/* MAP */
+
+.map{
+padding:80px 60px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+padding:80px 60px;
+background:#0d0d0d;
+}
+
+.contact p{
+color:white;
 }
 
 /* FOOTER */
@@ -239,6 +231,91 @@ background:black;
 color:#ffd700;
 text-align:center;
 padding:25px;
+border-top:2px solid #ff2a2a;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+.whatsapp img{
+width:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+flex-wrap:wrap;
+padding:20px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-right{
+display:none;
+flex-direction:column;
+width:100%;
+margin-top:15px;
+}
+
+.nav-right a,
+.phone{
+margin:10px 0;
+}
+
+.bookbtn{
+margin-top:10px;
+}
+
+.nav-right.active{
+display:flex;
+}
+
+.hero{
+flex-direction:column;
+padding:50px 20px;
+text-align:center;
+}
+
+.hero-text,
+.hero-img{
+width:100%;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.service-buttons{
+grid-template-columns:repeat(2,1fr);
+}
+
+.section{
+padding:60px 20px;
+}
+
+.card{
+flex-direction:column;
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:auto;
+}
+
 }
 
 </style>
@@ -247,160 +324,58 @@ padding:25px;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
 <div class="logo-area">
 <img src="logo.jpeg">
 </div>
 
-<div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="nav-right" id="navMenu">
+
 <a href="#">Home</a>
 <a href="#services">Services</a>
-<a href="#process">Process</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
+
+<div class="phone">📞 8095918091</div>
+
+<a class="bookbtn" href="#booking">Book Now</a>
+
 </div>
 
 </nav>
+
+<!-- HERO -->
 
 <div class="hero">
 
 <div class="hero-text">
 
-<h1>Trusted Maid & Domestic Help Services in Bangalore</h1>
+<h1>Helping Hands For Your Happy Home</h1>
 
-<p>Find reliable maids, cooks, babysitters and caregivers across Bangalore.</p>
+<p>Support That Feels Like Family.</p>
 
-<p>Currently serving Bangalore and expanding to more cities soon.</p>
-
-<div class="hero-buttons">
-<a class="callbtn" href="tel:8095918091">Call Now</a>
-<a class="whatsappbtn" href="https://wa.me/918095918091">WhatsApp</a>
+<div class="service-buttons">
+<div>Maids</div>
+<div>Cooks</div>
+<div>Drivers</div>
+<div>Baby Sitter</div>
+<div>Care Taker</div>
 </div>
 
 </div>
 
 <div class="hero-img">
-<img src="DS.jpg" width="100%">
+<img src="DS.jpg">
 </div>
 
 </div>
 
-<div class="trust-strip">
-✔ Verified Domestic Workers | ✔ Quick Service Across Bangalore | ✔ Flexible Work Hours | ✔ Trusted by Local Families
-</div>
-
-<div class="section" id="services">
-
-<h2>Our Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Maid Services</h3>
-<p>Professional maids for cleaning, sweeping, mopping and daily household work.</p>
-</div>
-
-<div class="card">
-<h3>Cook Services</h3>
-<p>Experienced cooks for preparing healthy home meals for your family.</p>
-</div>
-
-<div class="card">
-<h3>Driver Services</h3>
-<p>Reliable drivers available for personal and family transportation.</p>
-</div>
-
-<div class="card">
-<h3>Babysitter</h3>
-<p>Trusted nannies for infants and children.</p>
-</div>
-
-<div class="card">
-<h3>Elderly Care</h3>
-<p>Compassionate caregivers for senior citizens.</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="section" id="process">
-
-<h2>Our Simple Process</h2>
-
-<div class="process">
-
-<div class="step">
-<h3>1. Request Service</h3>
-<p>Call or WhatsApp us with your requirement.</p>
-</div>
-
-<div class="step">
-<h3>2. Requirement Discussion</h3>
-<p>We understand work type, timing and location.</p>
-</div>
-
-<div class="step">
-<h3>3. Worker Matching</h3>
-<p>We connect you with suitable verified staff.</p>
-</div>
-
-<div class="step">
-<h3>4. Service Start</h3>
-<p>The worker begins work at your home.</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>What Bangalore Families Say</h2>
-
-<div class="testimonial-wrapper">
-
-<div class="testimonial">
-<p>"Very reliable maid service."</p>
-<b>- Priya, Whitefield</b>
-</div>
-
-<div class="testimonial">
-<p>"Cook provided excellent home food."</p>
-<b>- Rahul, Marathahalli</b>
-</div>
-
-<div class="testimonial">
-<p>"Great babysitter service."</p>
-<b>- Sneha, HSR Layout</b>
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Currently Serving Across Bangalore</h2>
-
-<p>ShubhGrihasti currently provides domestic help across Bangalore and will expand to more cities soon.</p>
-
-<div class="areas">
-
-Whitefield<br>
-Marathahalli<br>
-Sarjapur Road<br>
-Electronic City<br>
-HSR Layout<br>
-BTM Layout<br>
-Indiranagar<br>
-Bellandur<br>
-KR Puram<br>
-Yelahanka<br>
-
-</div>
-
-</div>
+<!-- QUICK BOOKING -->
 
 <div class="section">
 
@@ -408,17 +383,123 @@ Yelahanka<br>
 
 <form onsubmit="sendToWhatsapp(); return false;">
 
+<input id="name2" placeholder="Your Name" required>
+<input id="phone2" placeholder="Phone Number" required>
+
+<select id="service2">
+<option>Maid</option>
+<option>Cook</option>
+<option>Driver</option>
+<option>Baby Care</option>
+<option>Elderly Care</option>
+</select>
+
+<textarea id="message2" placeholder="Additional details"></textarea>
+
+<button>Submit Booking</button>
+
+</form>
+
+</div>
+
+<!-- SERVICES -->
+
+<div class="section" id="services">
+
+<h2>OUR SERVICES</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="image1.jpg">
+<div>
+<h3>Maid Services</h3>
+<p>Trusted household helpers for cleaning and daily chores.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="image2.jfif">
+<div>
+<h3>Cooking Services</h3>
+<p>Experienced cooks for delicious home meals.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="driver.jfif">
+<div>
+<h3>Driver Services</h3>
+<p>Verified drivers available for personal transportation.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="baby.jfif">
+<div>
+<h3>Baby Care</h3>
+<p>Professional nannies to take care of your children.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="ES.jpg">
+<div>
+<h3>Elderly Care</h3>
+<p>Compassionate caregivers for senior citizen support.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<div class="section" id="about">
+
+<h2>Domestic Services</h2>
+
+<p>
+ShubhGrihasti provides trusted domestic help across Bangalore including maid services, cooking services, childcare and elderly care.
+</p>
+
+<p>
+Our mission is to make home life easier for busy families by providing reliable and verified household staff.
+</p>
+
+</div>
+
+<!-- WHY -->
+
+<div class="why">
+
+<h2>Why Choose ShubhGrihasti?</h2>
+
+<p>✔ Flexible pricing based on your needs</p>
+<p>✔ Flexible work hours</p>
+<p>✔ Experienced and trusted domestic workers</p>
+<p>✔ Aadhar ID verification before hiring staff</p>
+<p>✔ Friendly and reliable service</p>
+
+</div>
+
+<!-- BOOKING -->
+
+<div class="section" id="booking">
+
+<h2>Book a Service</h2>
+
+<form onsubmit="sendToWhatsapp(); return false;">
+
 <input id="name" placeholder="Your Name" required>
-
 <input id="phone" placeholder="Phone Number" required>
-
-<input id="location" placeholder="Your Location" required>
 
 <select id="service">
 <option>Maid</option>
 <option>Cook</option>
 <option>Driver</option>
-<option>Babysitter</option>
+<option>Baby Care</option>
 <option>Elderly Care</option>
 </select>
 
@@ -426,56 +507,66 @@ Yelahanka<br>
 
 <button>Submit Booking</button>
 
-<p class="callfast">⚡ Get a call within 10 minutes</p>
-
 </form>
 
 </div>
 
-<div class="section" id="contact">
+<!-- MAP -->
 
-<h2>Contact Us</h2>
+<div class="map">
 
+<h2 style="text-align:center;color:#ff3b3b;">Service Area</h2>
+
+<iframe src="https://www.google.com/maps?q=bangalore&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:10px;">
+</iframe>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="contact" id="contact">
+
+<h2 style="color:#ff3b3b;">Contact Us</h2>
+
+<p>📍 Service Area: All Over Bangalore</p>
 <p>📞 Phone: 8095918091</p>
-<p>📍 Currently Serving: Bangalore</p>
-<p>🕒 8 AM – 8 PM</p>
+<p>📧 support@shubhgrihasti.com</p>
+<p>🕒 Business Hours: 8 AM – 8 PM</p>
 
 </div>
 
 <footer>
-© 2026 ShubhGrihasti | Domestic Help Services Bangalore
+© 2026 ShubhGrihasti
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/918095918091">
+<a class="whatsapp" href="https://wa.me/918095918091" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
-
-<a class="call-float" href="tel:8095918091">
-📞
 </a>
 
 <script>
 
+function toggleMenu(){
+var menu=document.getElementById("navMenu");
+menu.classList.toggle("active");
+}
+
 function sendToWhatsapp(){
 
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var location=document.getElementById("location").value;
-var service=document.getElementById("service").value;
-var message=document.getElementById("message").value;
+var name=document.getElementById("name").value || document.getElementById("name2").value;
+var phone=document.getElementById("phone").value || document.getElementById("phone2").value;
+var service=document.getElementById("service").value || document.getElementById("service2").value;
+var message=document.getElementById("message").value || document.getElementById("message2").value;
 
-var text="New Booking:%0AName: "+name+
-"%0APhone: "+phone+
-"%0ALocation: "+location+
-"%0AService: "+service+
-"%0AMessage: "+message;
+var text="New Booking:%0AName: "+name+"%0APhone: "+phone+"%0AService: "+service+"%0AMessage: "+message;
 
-window.open("https://wa.me/918095918091?text="+text);
+window.open("https://wa.me/918095918091?text="+text,'_blank');
 
 }
 
 </script>
 
 </body>
-</html>
-```
+</html>[go through this code and tell me yes or no]
