@@ -111,8 +111,6 @@ text-align:center;
 font-weight:600;
 }
 
-/* HERO IMAGE */
-
 .hero-img{
 width:50%;
 }
@@ -325,7 +323,7 @@ from{ box-shadow:0 0 10px #25D366; }
 to{ box-shadow:0 0 25px #25D366,0 0 40px #25D366; }
 }
 
-/* CALL BUTTON (BLUE NOW) */
+/* CALL BUTTON BLUE */
 
 .callbtn{
 position:fixed;
@@ -346,12 +344,51 @@ from{ box-shadow:0 0 10px #007BFF; }
 to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{padding:20px;}
+
+.menu-toggle{display:block;}
+
+.nav-right{
+display:none;
+position:absolute;
+top:80px;
+right:20px;
+background:#000;
+padding:20px;
+border-radius:10px;
+flex-direction:column;
+}
+
+.nav-right.active{display:flex;}
+
+.hero{
+flex-direction:column;
+padding:50px 20px;
+text-align:center;
+}
+
+.hero-text,.hero-img{width:100%;}
+
+.hero-text h1{font-size:32px;}
+
+.service-buttons{grid-template-columns:repeat(2,1fr);}
+
+.section{padding:60px 20px;}
+
+.card{flex-direction:column;text-align:center;}
+
+.card img{width:100%;height:auto;}
+
+}
+
 </style>
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -371,8 +408,6 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 </div>
 
 </nav>
-
-<!-- HERO -->
 
 <div class="hero">
 
@@ -399,7 +434,7 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 
 <!-- QUICK BOOKING -->
 
-<div class="section">
+<div class="section" id="booking">
 
 <h2>Quick Booking</h2>
 
@@ -425,6 +460,106 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 
 </form>
 
+</div>
+
+<!-- SERVICES -->
+
+<div class="section" id="services">
+
+<h2>OUR SERVICES</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="image1.jpg">
+<div>
+<h3>Maid Services</h3>
+<p>Trusted household helpers for cleaning and daily chores.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="image2.jfif">
+<div>
+<h3>Cooking Services</h3>
+<p>Experienced cooks for delicious home meals.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="driver.jfif">
+<div>
+<h3>Driver Services</h3>
+<p>Verified drivers available for personal transportation.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="baby.jfif">
+<div>
+<h3>Baby Care</h3>
+<p>Professional nannies to take care of your children.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="ES.jpg">
+<div>
+<h3>Elderly Care</h3>
+<p>Compassionate caregivers for senior citizen support.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+
+<div class="section" id="about">
+
+<h2>Domestic Services</h2>
+
+<p>
+ShubhGrihasti provides trusted domestic help across Bangalore including maid services, cooking services, childcare and elderly care.
+</p>
+
+<p>
+Our mission is to make home life easier for busy families by providing reliable and verified household staff.
+</p>
+
+</div>
+
+<!-- WHY -->
+
+<div class="why">
+
+<h2>Why Choose ShubhGrihasti?</h2>
+
+<p>✔ Flexible pricing based on your needs</p>
+<p>✔ Flexible work hours</p>
+<p>✔ Experienced and trusted domestic workers</p>
+<p>✔ Aadhar ID verification before hiring staff</p>
+<p>✔ Friendly and reliable service</p>
+
+</div>
+
+<!-- PROCESS -->
+
+<div class="section">
+
+<h2>Our Process</h2>
+
+<div class="process-grid">
+
+<div class="step"><h3>1</h3><p>Submit request via website, call or WhatsApp.</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>2</h3><p>Our team contacts you within 10 minutes.</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>3</h3><p>We match you with verified domestic workers.</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>4</h3><p>You select the worker and service begins.</p></div>
+
+</div>
 </div>
 
 <!-- TESTIMONIALS -->
@@ -476,6 +611,19 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 </div>
 
 </div>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="contact" id="contact">
+
+<h2 style="color:#ff3b3b;">Contact Us</h2>
+
+<p>📍 Service Area: All Over Bangalore</p>
+<p>📞 Phone: 8095918091</p>
+<p>📧 support@shubhgrihasti.com</p>
+<p>🕒 Business Hours: 8 AM – 8 PM</p>
 
 </div>
 
