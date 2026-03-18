@@ -325,7 +325,7 @@ from{ box-shadow:0 0 10px #25D366; }
 to{ box-shadow:0 0 25px #25D366,0 0 40px #25D366; }
 }
 
-/* CALL BUTTON BLUE */
+/* CALL BUTTON (BLUE NOW) */
 
 .callbtn{
 position:fixed;
@@ -351,6 +351,52 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 
 <body>
 
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo-area">
+<img src="logo.jpeg">
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="nav-right" id="navMenu">
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<div class="phone">📞 8095918091</div>
+<a class="bookbtn" href="#booking">Book Now</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="hero-text">
+
+<h1>Helping Hands For Your Happy Home</h1>
+<p>Support That Feels Like Family.</p>
+
+<div class="service-buttons">
+<div>Maids</div>
+<div>Cooks</div>
+<div>Drivers</div>
+<div>Baby Sitter</div>
+<div>Care Taker</div>
+</div>
+
+</div>
+
+<div class="hero-img">
+<img src="DS.jpg">
+</div>
+
+</div>
+
 <!-- QUICK BOOKING -->
 
 <div class="section">
@@ -363,8 +409,8 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 <input id="phone2" placeholder="Phone Number" required>
 <input id="location2" placeholder="Your Location" required>
 
-<select id="service2">
-<option disabled selected>Service</option>
+<select id="service2" required>
+<option value="" disabled selected>Service</option>
 <option>Maid</option>
 <option>Cook</option>
 <option>Driver</option>
@@ -395,38 +441,38 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 </div>
 
 <div class="testimonial">
-<p>"Found a great cook for our home within 2 days."</p>
+<p>"Found a great cook for our home within 2 days. Highly recommended."</p>
 <h4>- Rahul M, Marathahalli</h4>
 </div>
 
 <div class="testimonial">
-<p>"Professional team and quick response."</p>
+<p>"Professional team and quick response. Good support."</p>
 <h4>- Ananya K, Sarjapur</h4>
 </div>
 
 <div class="testimonial">
-<p>"Very happy with the babysitter service."</p>
-<h4>- Sneha R, Bellandur</h4>
+<p>"Very satisfied with the nanny service for our baby."</p>
+<h4>- Kavya R, Bellandur</h4>
 </div>
 
 <div class="testimonial">
-<p>"Driver provided was professional and punctual."</p>
-<h4>- Vikram P, Indiranagar</h4>
+<p>"Driver provided was very experienced and professional."</p>
+<h4>- Mohan P, Indiranagar</h4>
 </div>
 
 <div class="testimonial">
-<p>"Excellent elderly care support."</p>
-<h4>- Kavita N, HSR Layout</h4>
+<p>"Quick service and trustworthy staff."</p>
+<h4>- Sneha T, HSR Layout</h4>
 </div>
 
 <div class="testimonial">
-<p>"Quick response and verified staff."</p>
-<h4>- Rohit S, Brookefield</h4>
+<p>"Very good support from the team throughout the process."</p>
+<h4>- Arjun N, Electronic City</h4>
 </div>
 
 <div class="testimonial">
-<p>"Best domestic help service we found in Bangalore."</p>
-<h4>- Meera T, KR Puram</h4>
+<p>"Affordable and reliable domestic services."</p>
+<h4>- Meera K, Koramangala</h4>
 </div>
 
 </div>
@@ -444,6 +490,11 @@ to{ box-shadow:0 0 25px #007BFF,0 0 40px #007BFF; }
 </a>
 
 <script>
+
+function toggleMenu(){
+var menu=document.getElementById("navMenu");
+menu.classList.toggle("active");
+}
 
 function sendToWhatsapp(){
 
