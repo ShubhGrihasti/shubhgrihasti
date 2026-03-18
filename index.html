@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +8,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:Georgia, serif;
+font-family:'Poppins',sans-serif;
 background:#000;
 color:#ffd700;
 }
@@ -27,10 +28,11 @@ align-items:center;
 padding:18px 60px;
 background:black;
 border-bottom:2px solid #ff2a2a;
+position:relative;
 }
 
 .logo-area img{
-height:55px;
+height:75px;
 }
 
 .nav-right{
@@ -42,13 +44,13 @@ nav a{
 margin-left:25px;
 text-decoration:none;
 color:#ffd700;
-font-weight:bold;
+font-weight:600;
 }
 
 .phone{
 margin-left:25px;
 color:#ff3b3b;
-font-weight:bold;
+font-weight:600;
 }
 
 .bookbtn{
@@ -58,7 +60,7 @@ padding:10px 20px;
 border-radius:6px;
 margin-left:25px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 }
 
 /* HAMBURGER */
@@ -107,7 +109,7 @@ color:white;
 padding:14px;
 border-radius:6px;
 text-align:center;
-font-weight:bold;
+font-weight:600;
 }
 
 /* HERO IMAGE */
@@ -194,6 +196,12 @@ margin:10px 0;
 border-radius:6px;
 border:none;
 font-size:16px;
+height:50px;
+box-sizing:border-box;
+}
+
+textarea{
+height:100px;
 }
 
 button{
@@ -204,6 +212,18 @@ padding:14px 25px;
 border-radius:6px;
 font-size:16px;
 cursor:pointer;
+}
+
+.callback{
+color:#ffd700;
+margin-top:10px;
+font-weight:600;
+animation:glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 5px #ffd700; }
+to{ text-shadow:0 0 15px #ffd700,0 0 25px #ff2a2a; }
 }
 
 /* MAP */
@@ -241,13 +261,40 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:14px;
+padding:16px;
 border-radius:50%;
-box-shadow:0 4px 10px rgba(0,0,0,0.4);
+box-shadow:0 0 10px #25D366,0 0 25px #25D366;
+animation:whatsappGlow 1.5s infinite alternate;
 }
 
 .whatsapp img{
 width:30px;
+}
+
+@keyframes whatsappGlow{
+from{ box-shadow:0 0 10px #25D366; }
+to{ box-shadow:0 0 25px #25D366,0 0 40px #25D366; }
+}
+
+/* CALL BUTTON */
+
+.callbtn{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#ff2a2a;
+color:white;
+padding:16px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+box-shadow:0 0 10px #ff2a2a,0 0 25px #ff2a2a;
+animation:callGlow 1.5s infinite alternate;
+}
+
+@keyframes callGlow{
+from{ box-shadow:0 0 10px #ff2a2a; }
+to{ box-shadow:0 0 25px #ff2a2a,0 0 40px #ff2a2a; }
 }
 
 /* MOBILE */
@@ -255,7 +302,6 @@ width:30px;
 @media(max-width:768px){
 
 nav{
-flex-wrap:wrap;
 padding:20px;
 }
 
@@ -265,18 +311,20 @@ display:block;
 
 .nav-right{
 display:none;
+position:absolute;
+top:80px;
+right:20px;
+background:#000;
+padding:20px;
+border-radius:10px;
 flex-direction:column;
-width:100%;
-margin-top:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.6);
+z-index:1000;
 }
 
 .nav-right a,
 .phone{
 margin:10px 0;
-}
-
-.bookbtn{
-margin-top:10px;
 }
 
 .nav-right.active{
@@ -324,8 +372,6 @@ height:auto;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
 <div class="logo-area">
@@ -348,8 +394,6 @@ height:auto;
 </div>
 
 </nav>
-
-<!-- HERO -->
 
 <div class="hero">
 
@@ -375,8 +419,6 @@ height:auto;
 
 </div>
 
-<!-- QUICK BOOKING -->
-
 <div class="section">
 
 <h2>Quick Booking</h2>
@@ -385,6 +427,7 @@ height:auto;
 
 <input id="name2" placeholder="Your Name" required>
 <input id="phone2" placeholder="Phone Number" required>
+<input id="location2" placeholder="Your Location" required>
 
 <select id="service2">
 <option>Maid</option>
@@ -398,11 +441,11 @@ height:auto;
 
 <button>Submit Booking</button>
 
+<p class="callback">⚡ Get a call within 10 minutes</p>
+
 </form>
 
 </div>
-
-<!-- SERVICES -->
 
 <div class="section" id="services">
 
@@ -454,8 +497,6 @@ height:auto;
 
 </div>
 
-<!-- ABOUT -->
-
 <div class="section" id="about">
 
 <h2>Domestic Services</h2>
@@ -470,8 +511,6 @@ Our mission is to make home life easier for busy families by providing reliable 
 
 </div>
 
-<!-- WHY -->
-
 <div class="why">
 
 <h2>Why Choose ShubhGrihasti?</h2>
@@ -484,8 +523,6 @@ Our mission is to make home life easier for busy families by providing reliable 
 
 </div>
 
-<!-- BOOKING -->
-
 <div class="section" id="booking">
 
 <h2>Book a Service</h2>
@@ -494,6 +531,7 @@ Our mission is to make home life easier for busy families by providing reliable 
 
 <input id="name" placeholder="Your Name" required>
 <input id="phone" placeholder="Phone Number" required>
+<input id="location" placeholder="Your Location" required>
 
 <select id="service">
 <option>Maid</option>
@@ -507,11 +545,11 @@ Our mission is to make home life easier for busy families by providing reliable 
 
 <button>Submit Booking</button>
 
+<p class="callback">⚡ Get a call within 10 minutes</p>
+
 </form>
 
 </div>
-
-<!-- MAP -->
 
 <div class="map">
 
@@ -524,8 +562,6 @@ style="border:0;border-radius:10px;">
 </iframe>
 
 </div>
-
-<!-- CONTACT -->
 
 <div class="contact" id="contact">
 
@@ -542,6 +578,8 @@ style="border:0;border-radius:10px;">
 © 2026 ShubhGrihasti
 </footer>
 
+<a class="callbtn" href="tel:8095918091">📞</a>
+
 <a class="whatsapp" href="https://wa.me/918095918091" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
@@ -555,12 +593,17 @@ menu.classList.toggle("active");
 
 function sendToWhatsapp(){
 
-var name=document.getElementById("name").value || document.getElementById("name2").value;
-var phone=document.getElementById("phone").value || document.getElementById("phone2").value;
-var service=document.getElementById("service").value || document.getElementById("service2").value;
-var message=document.getElementById("message").value || document.getElementById("message2").value;
+var name=document.getElementById("name")?.value || document.getElementById("name2")?.value;
+var phone=document.getElementById("phone")?.value || document.getElementById("phone2")?.value;
+var location=document.getElementById("location")?.value || document.getElementById("location2")?.value;
+var service=document.getElementById("service")?.value || document.getElementById("service2")?.value;
+var message=document.getElementById("message")?.value || document.getElementById("message2")?.value;
 
-var text="New Booking:%0AName: "+name+"%0APhone: "+phone+"%0AService: "+service+"%0AMessage: "+message;
+var text="New Booking:%0AName: "+name+
+"%0APhone: "+phone+
+"%0ALocation: "+location+
+"%0AService: "+service+
+"%0AMessage: "+message;
 
 window.open("https://wa.me/918095918091?text="+text,'_blank');
 
