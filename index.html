@@ -354,21 +354,21 @@ nav{padding:20px;}
 .nav-right{
 position:fixed;
 top:80px;
-right:-260px;
-width:260px;
-max-height:50vh;   /* limits height to half screen */
+right:-100%;
+width:220px;          /* smaller width */
+max-height:50vh;      /* maximum half screen height */
 overflow-y:auto;
 
 background:#87CEFA;
 padding:25px 20px;
-border-radius:12px;
+border-radius:12px 0 0 12px;
 
 flex-direction:column;
-box-shadow:-5px 0 20px rgba(0,0,0,0.2);
+box-shadow:-5px 0 15px rgba(0,0,0,0.2);
 z-index:1000;
 
 display:flex;
-transition:right 0.4s ease;
+transition:right 0.35s ease;
 }
 
 .nav-right a,
@@ -376,10 +376,11 @@ transition:right 0.4s ease;
 margin:12px 0;
 font-size:18px;
 color:#003366;
+text-align:center;
 }
 
 .nav-right.active{
-right:20px;
+right:0;
 }
 .hero{
 flex-direction:column;
