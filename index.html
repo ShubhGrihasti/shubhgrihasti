@@ -25,7 +25,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 60px;
-background:black;
+background:#F8C8DC;
 border-bottom:2px solid #ff2a2a;
 position:relative;
 }
@@ -303,47 +303,46 @@ border-top:2px solid #ff2a2a;
 
 /* WHATSAPP */
 
+/* WHATSAPP BUTTON */
+
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:16px;
+padding:12px;
 border-radius:50%;
-box-shadow:0 0 6px #25D366;
-animation:whatsappGlow 2s infinite alternate;
+animation:buzz 1s infinite;
 }
 
 .whatsapp img{
-width:30px;
+width:24px;
 }
 
-@keyframes whatsappGlow{
-from{ box-shadow:0 0 6px #25D366; }
-to{ box-shadow:0 0 12px #25D366; }
-}
-
-/* CALL BUTTON ABOVE WHATSAPP */
+/* CALL BUTTON */
 
 .callbtn{
 position:fixed;
-bottom:90px;
+bottom:80px;
 right:20px;
 background:#007BFF;
 color:white;
-padding:16px;
+padding:12px;
 border-radius:50%;
-font-size:24px;
+font-size:20px;
 text-decoration:none;
-box-shadow:0 0 6px #007BFF;
-animation:callGlow 2s infinite alternate;
+animation:buzz 1s infinite;
 }
 
-@keyframes callGlow{
-from{ box-shadow:0 0 6px #007BFF; }
-to{ box-shadow:0 0 12px #007BFF; }
-}
+/* BUZZ ANIMATION */
 
+@keyframes buzz{
+0% { transform: translateX(0); }
+25% { transform: translateX(-3px); }
+50% { transform: translateX(3px); }
+75% { transform: translateX(-3px); }
+100% { transform: translateX(0); }
+}
 /* MOBILE */
 
 @media(max-width:768px){
