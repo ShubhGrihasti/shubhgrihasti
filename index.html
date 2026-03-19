@@ -352,17 +352,30 @@ nav{padding:20px;}
 .menu-toggle{display:block;}
 
 .nav-right{
-display:none;
 position:absolute;
 top:80px;
 right:20px;
-background:#000;
+background:#87CEFA;
 padding:20px;
 border-radius:10px;
 flex-direction:column;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+z-index:1000;
+
+/* smooth transition */
+max-height:0;
+overflow:hidden;
+opacity:0;
+transform:translateY(-10px);
+transition:all 0.4s ease;
+display:flex;
 }
 
-.nav-right.active{display:flex;}
+.nav-right.active{
+max-height:400px;
+opacity:1;
+transform:translateY(0);
+}
 
 .hero{
 flex-direction:column;
