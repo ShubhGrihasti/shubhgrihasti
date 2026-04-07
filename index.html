@@ -30,11 +30,9 @@ border-bottom:2px solid #ff2a2a;
 }
 
 .logo img {
-  max-width: 150px;
-  height: auto;
+max-width:150px;
+height:auto;
 }
-
-/* NAV RIGHT */
 
 .nav-right{
 display:flex;
@@ -134,7 +132,7 @@ color:#ff3b3b;
 font-size:34px;
 }
 
-/* ✅ FIXED SERVICES GRID */
+/* ✅ SERVICES FIX */
 
 .grid{
 display:grid;
@@ -305,7 +303,7 @@ padding:25px;
 border-top:2px solid #ff2a2a;
 }
 
-/* WHATSAPP BUTTON */
+/* FLOAT BUTTONS */
 
 .whatsapp{
 position:fixed;
@@ -319,8 +317,6 @@ border-radius:50%;
 .whatsapp img{
 width:24px;
 }
-
-/* CALL BUTTON */
 
 .callbtn{
 position:fixed;
@@ -355,9 +351,7 @@ z-index:1000;
 transition:right 0.3s;
 }
 
-.nav-right.active{
-right:0;
-}
+.nav-right.active{right:0;}
 
 .hero{
 flex-direction:column;
@@ -371,9 +365,7 @@ text-align:center;
 
 .section{padding:60px 20px;}
 
-.logo img{
-max-width:110px;
-}
+.logo img{max-width:110px;}
 
 }
 
@@ -413,7 +405,6 @@ max-width:110px;
 <div>Baby Sitter</div>
 <div>Elderly Care</div>
 </div>
-
 </div>
 
 <div class="hero-img">
@@ -422,10 +413,34 @@ max-width:110px;
 
 </div>
 
+<!-- BOOKING -->
+
+<div class="section" id="booking">
+<h2>Quick Booking</h2>
+
+<form onsubmit="sendToWhatsapp(); return false;">
+<input id="name2" placeholder="Your Name" required>
+<input id="phone2" placeholder="Phone Number" required>
+<input id="location2" placeholder="Your Location" required>
+
+<select id="service2" required>
+<option value="" disabled selected>Service</option>
+<option>Maid</option>
+<option>Cook</option>
+<option>Baby Care</option>
+<option>Elderly Care</option>
+</select>
+
+<textarea id="message2" placeholder="Additional details"></textarea>
+
+<button>Submit Booking</button>
+<p class="callback">⚡ Get a call within 10 minutes</p>
+</form>
+</div>
+
 <!-- SERVICES -->
 
 <div class="section" id="services">
-
 <h2>OUR SERVICES</h2>
 
 <div class="grid">
@@ -433,35 +448,116 @@ max-width:110px;
 <div class="card">
 <img src="image1.jpg">
 <h3>Maid Services</h3>
-<p>Professional housekeeping, cleaning, and home maintenance.</p>
+<p>Professional housekeeping and cleaning.</p>
 </div>
 
 <div class="card">
 <img src="image2.jfif">
 <h3>Cooking Services</h3>
-<p>Experienced cooks for hygienic home-style meals.</p>
+<p>Experienced cooks for hygienic meals.</p>
 </div>
 
 <div class="card">
 <img src="baby.jfif">
 <h3>Baby Care</h3>
-<p>Safe and caring babysitters for your children.</p>
+<p>Safe and caring babysitters.</p>
 </div>
 
 <div class="card">
 <img src="ES.jpg">
 <h3>Elderly Care</h3>
-<p>Compassionate attendants for senior care.</p>
+<p>Compassionate senior support.</p>
+</div>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+
+<div class="section" id="about">
+<h2>Domestic Services</h2>
+<p>Trusted domestic help across Bangalore including maid, cooking, childcare and elderly care.</p>
+<p>Reliable and verified household staff for your home.</p>
+</div>
+
+<!-- WHY -->
+
+<div class="why">
+<h2>Why Choose ShubhGrihasti?</h2>
+<p>✔ Flexible pricing</p>
+<p>✔ Verified staff</p>
+<p>✔ Quick response</p>
+<p>✔ Trusted service</p>
+</div>
+
+<!-- PROCESS -->
+
+<div class="section">
+<h2>Our Process</h2>
+
+<div class="process-grid">
+<div class="step"><h3>1</h3><p>Submit request</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>2</h3><p>We call you</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>3</h3><p>We match staff</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>4</h3><p>Service starts</p></div>
 </div>
 
 </div>
 
+<!-- TESTIMONIALS -->
+
+<div class="section">
+<h2>Customer Testimonials</h2>
+
+<div class="testimonial-grid">
+<div class="testimonial"><p>"Very reliable service."</p><h4>- Priya</h4></div>
+<div class="testimonial"><p>"Great cook found quickly."</p><h4>- Rahul</h4></div>
+<div class="testimonial"><p>"Professional team."</p><h4>- Ananya</h4></div>
 </div>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="contact" id="contact">
+<h2 style="color:#ff3b3b;">Contact Us</h2>
+<p>📞 8151835253</p>
+<p>📧 support@shubhgrihasti.com</p>
+</div>
+
+<footer>© 2026 ShubhGrihasti</footer>
+
+<a class="callbtn" href="tel:8151835253">📞</a>
+
+<a class="whatsapp" href="https://wa.me/918151835253" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 <script>
+
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
+
+function sendToWhatsapp(){
+var name=document.getElementById("name2").value;
+var phone=document.getElementById("phone2").value;
+var location=document.getElementById("location2").value;
+var service=document.getElementById("service2").value;
+var message=document.getElementById("message2").value;
+
+var text="New Booking:%0AName: "+name+
+"%0APhone: "+phone+
+"%0ALocation: "+location+
+"%0AService: "+service+
+"%0AMessage: "+message;
+
+window.open("https://wa.me/918151835253?text="+text,'_blank');
+}
+
 </script>
 
 </body>
