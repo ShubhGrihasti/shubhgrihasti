@@ -29,8 +29,9 @@ background:#4a4a4a;
 border-bottom:2px solid #ff2a2a;
 }
 
-.logo img{
+.logo img {
 max-width:200px;
+height:auto;
 }
 
 .nav-right{
@@ -91,7 +92,7 @@ color:#0B6623;
 
 .hero-text p{
 font-size:18px;
-color:#4a4a4a;
+color:4a4a4a;
 margin-bottom:25px;
 }
 
@@ -131,7 +132,56 @@ color:#ff3b3b;
 font-size:34px;
 }
 
-/* BOOKING BOX */
+/* ✅ SERVICES FIX */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+display:flex;
+flex-direction:column;
+background:#111;
+padding:20px;
+border-radius:10px;
+border:1px solid #222;
+height:100%;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+.card h3{
+color:#ffd700;
+margin-bottom:10px;
+}
+
+.card p{
+color:white;
+}
+
+/* WHY */
+
+.why{
+background:#0d0d0d;
+padding:80px 60px;
+text-align:center;
+}
+
+.why p{
+color:white;
+font-size:18px;
+}
+
+/* FORM */
 
 .booking-box{
 background:#000;
@@ -139,7 +189,7 @@ padding:30px 25px;
 border-radius:12px;
 max-width:550px;
 margin:40px auto;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+box-shadow:0 0 15px rgba(0,0,0,0.3);
 }
 
 .booking-box h2{
@@ -162,14 +212,13 @@ color:#aaa;
 width:100%;
 }
 
-/* FORM */
-
 form{
 max-width:500px;
 margin:auto;
 }
 
-input,select,textarea{
+input, select, textarea{
+font-family: 'Poppins', sans-serif;
 width:100%;
 padding:14px;
 margin:10px 0;
@@ -188,53 +237,127 @@ button{
 background:#ff2a2a;
 color:white;
 border:none;
-padding:14px;
+padding:14px 25px;
 border-radius:6px;
 font-size:16px;
 cursor:pointer;
 }
 
 .callback{
-color:#ffd700;
+color:#18392B;
 margin-top:10px;
 font-weight:600;
+animation:glow 1.5s infinite alternate;
 }
 
-/* SERVICES */
+@keyframes glow{
+from{ text-shadow:0 0 5px #ffd700; }
+to{ text-shadow:0 0 15px #ffd700,0 0 25px #ff2a2a; }
+}
 
-.grid{
+/* PROCESS */
+
+.process-grid{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:40px;
+}
+
+.step{
+background:#111;
+padding:25px;
+border-radius:10px;
+width:220px;
+border:1px solid #222;
+}
+
+.step h3{
+color:#ff2a2a;
+font-size:28px;
+margin-bottom:10px;
+}
+
+.step p{
+color:white;
+}
+
+.arrow{
+font-size:30px;
+color:#ffd700;
+}
+
+/* TESTIMONIALS */
+
+.testimonial-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 margin-top:40px;
 }
 
-.card{
+.testimonial{
 background:#111;
-padding:20px;
+padding:25px;
 border-radius:10px;
+border:1px solid #222;
 color:white;
 }
 
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:8px;
-margin-bottom:15px;
-}
-
-.card h3{
+.testimonial h4{
+margin-top:15px;
 color:#ffd700;
 }
 
-/* WHY */
+/* CONTACT */
 
-.why{
-background:#0d0d0d;
-padding:80px 60px;
+.contact{
 text-align:center;
+padding:80px 60px;
+background:#4a4a4a;
+}
+
+.contact p{
 color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+color:#ffd700;
+text-align:center;
+padding:25px;
+border-top:2px solid #ff2a2a;
+}
+
+/* FLOAT BUTTONS */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:12px;
+border-radius:50%;
+}
+
+.whatsapp img{
+width:24px;
+}
+
+.callbtn{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#4da6ff;
+color:white;
+padding:12px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
 }
 
 /* MOBILE */
@@ -251,7 +374,10 @@ max-width:60px;
 
 .menu-toggle{
 display:block;
+margin-left:auto;
 }
+
+.menu-toggle{display:block;}
 
 .nav-right{
 position:fixed;
@@ -259,14 +385,14 @@ top:80px;
 right:-100%;
 width:220px;
 background:#87CEFA;
-padding:25px;
+padding:25px 20px;
+border-radius:12px 0 0 12px;
 flex-direction:column;
-transition:0.3s;
+z-index:1000;
+transition:right 0.3s;
 }
 
-.nav-right.active{
-right:0;
-}
+.nav-right.active{right:0;}
 
 .hero{
 flex-direction:column;
@@ -274,9 +400,13 @@ padding:50px 20px;
 text-align:center;
 }
 
-.hero-text,.hero-img{
-width:100%;
-}
+.hero-text,.hero-img{width:100%;}
+
+.hero-text h1{font-size:32px;}
+
+.section{padding:60px 20px;}
+
+.logo img{max-width:180px;}
 
 }
 
@@ -367,31 +497,97 @@ width:100%;
 <div class="card">
 <img src="image1.jpg">
 <h3>Maid Services</h3>
-<p>Our maids bring comfort and peace into your home while handling chores with care.</p>
+<p>Our maids bring not just cleanliness, but comfort and peace into your home. They handle daily chores with care and attention, so you can relax and spend time on what truly matters. A clean home is a happy home—and we’re here to make that happen for you.</p>
 </div>
 
 <div class="card">
 <img src="image2.jfif">
 <h3>Cooking Services</h3>
-<p>Enjoy fresh, home-cooked meals prepared with love and hygiene.</p>
+<p>Enjoy the warmth of home-cooked meals without the stress of cooking every day. Our experienced cooks prepare delicious, hygienic food tailored to your taste and family’s preferences. Because nothing feels better than a lovingly prepared meal at home.</p>
 </div>
 
 <div class="card">
 <img src="baby.jfif">
 <h3>Baby Care</h3>
-<p>Loving caregivers ensure your child’s safety and happiness.</p>
+<p>Your child deserves gentle, loving, and attentive care at all times. Our trained caregivers treat your little ones like family, ensuring their safety, comfort, and happiness. So you can have peace of mind knowing your baby is in caring hands.</p>
 </div>
 
 <div class="card">
 <img src="ES.jpg">
 <h3>Elderly Care</h3>
-<p>Compassionate care for elders with dignity and respect.</p>
+<p>We provide compassionate care that respects the dignity and needs of your loved ones. Our caregivers offer support, companionship, and attention, making everyday life easier and comfortable. Elders deserve the same love and care they’ve always given.</p>
 </div>
 
 </div>
 </div>
+
+<!-- ABOUT -->
+
+<div class="section" id="about">
+<h2>Domestic Services</h2>
+<p>Trusted domestic help across Bangalore including maid, cooking, childcare and elderly care.</p>
+<p>Reliable and verified household staff for your home.</p>
+</div>
+
+<!-- WHY -->
+
+<div class="why">
+<h2 style="color:#ffffff;">Why Choose Shubh Grihasti?</h2>
+<p>✔ Flexible pricing</p>
+<p>✔ Verified staff</p>
+<p>✔ Quick response</p>
+<p>✔ Trusted service</p>
+</div>
+
+<!-- PROCESS -->
+
+<div class="section">
+<h2>Our Process</h2>
+
+<div class="process-grid">
+<div class="step"><h3>1</h3><p>Submit request</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>2</h3><p>We call you</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>3</h3><p>We match staff</p></div>
+<div class="arrow">→</div>
+<div class="step"><h3>4</h3><p>Service starts</p></div>
+<div class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div>
+
+</div>
+
+<!-- TESTIMONIALS -->
+
+<div class="section">
+<h2>Customer Testimonials</h2>
+
+<div class="testimonial-grid">
+<div class="testimonial"><p>"Very reliable service."</p><h4>- Priya</h4></div>
+<div class="testimonial"><p>"Great cook found quickly."</p><h4>- Rahul</h4></div>
+<div class="testimonial"><p>"Professional team."</p><h4>- Ananya</h4></div>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="contact" id="contact">
+<h2 style="color:#ff3b3b;">Contact Us</h2>
+<p>📞 8151835253</p>
+<p>📧 support@shubhgrihasti.com</p>
+</div>
+
+<footer>© 2026 ShubhGrihasti</footer>
+
+<a class="callbtn" href="tel:8151835253">📞</a>
+
+<a class="whatsapp" href="https://wa.me/918151835253" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 <script>
+
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
@@ -411,6 +607,7 @@ var text="New Booking:%0AName: "+name+
 
 window.open("https://wa.me/918151835253?text="+text,'_blank');
 }
+
 </script>
 
 </body>
