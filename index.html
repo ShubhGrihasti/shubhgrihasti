@@ -10,6 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 
 body{
 margin:0;
@@ -19,7 +22,6 @@ color:#000;
 }
 
 /* NAVBAR */
-
 nav{
 display:flex;
 justify-content:space-between;
@@ -44,6 +46,11 @@ margin-left:25px;
 text-decoration:none;
 color:#ffd700;
 font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:white;
 }
 
 .phone{
@@ -52,6 +59,14 @@ color:#ff3b3b;
 font-weight:600;
 }
 
+/* PULSE ANIMATION */
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
+}
+
+/* NAV BAR BOOK NOW */
 .bookbtn{
 background:#ff2a2a;
 color:white;
@@ -60,10 +75,15 @@ border-radius:6px;
 margin-left:25px;
 text-decoration:none;
 font-weight:600;
+transition:0.3s;
+animation: pulse 1.5s infinite;
+}
+
+.bookbtn:hover{
+background:#cc0000;
 }
 
 /* HAMBURGER */
-
 .menu-toggle{
 display:none;
 font-size:28px;
@@ -72,7 +92,6 @@ cursor:pointer;
 }
 
 /* HERO */
-
 .hero{
 display:flex;
 align-items:center;
@@ -92,7 +111,7 @@ color:#0B6623;
 
 .hero-text p{
 font-size:18px;
-color:4a4a4a;
+color:#4a4a4a;
 margin-bottom:25px;
 }
 
@@ -111,6 +130,7 @@ text-align:center;
 font-weight:600;
 }
 
+/* HERO IMAGE */
 .hero-img{
 width:50%;
 }
@@ -121,7 +141,6 @@ border-radius:12px;
 }
 
 /* SECTION */
-
 .section{
 padding:80px 60px;
 text-align:center;
@@ -132,8 +151,7 @@ color:#ff3b3b;
 font-size:34px;
 }
 
-/* ✅ SERVICES FIX */
-
+/* SERVICES GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -149,6 +167,11 @@ padding:20px;
 border-radius:10px;
 border:1px solid #222;
 height:100%;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
@@ -169,7 +192,6 @@ color:white;
 }
 
 /* WHY */
-
 .why{
 background:#0d0d0d;
 padding:80px 60px;
@@ -182,7 +204,6 @@ font-size:18px;
 }
 
 /* FORM */
-
 .booking-box{
 background:#000;
 padding:30px 25px;
@@ -256,7 +277,6 @@ to{ text-shadow:0 0 15px #ffd700,0 0 25px #ff2a2a; }
 }
 
 /* PROCESS */
-
 .process-grid{
 display:flex;
 align-items:center;
@@ -290,7 +310,6 @@ color:#ffd700;
 }
 
 /* TESTIMONIALS */
-
 .testimonial-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -312,7 +331,6 @@ color:#ffd700;
 }
 
 /* CONTACT */
-
 .contact{
 text-align:center;
 padding:80px 60px;
@@ -324,7 +342,6 @@ color:white;
 }
 
 /* FOOTER */
-
 footer{
 background:black;
 color:#ffd700;
@@ -334,14 +351,21 @@ border-top:2px solid #ff2a2a;
 }
 
 /* FLOAT BUTTONS */
+.whatsapp, .callbtn, .float-bookbtn{
+position:fixed;
+right:20px;
+border-radius:50%;
+padding:12px;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+}
 
 .whatsapp{
-position:fixed;
 bottom:20px;
-right:20px;
 background:#25D366;
-padding:12px;
-border-radius:50%;
 }
 
 .whatsapp img{
@@ -349,50 +373,53 @@ width:24px;
 }
 
 .callbtn{
-position:fixed;
 bottom:80px;
-right:20px;
 background:#4da6ff;
 color:white;
-padding:12px;
-border-radius:50%;
 font-size:20px;
 text-decoration:none;
 }
 
+.float-bookbtn{
+bottom:140px;
+background:#ff2a2a;
+color:white;
+font-weight:600;
+font-size:16px;
+text-decoration:none;
+animation: pulse 1.5s infinite;
+padding:14px 18px;
+}
+
 /* MOBILE */
-
 @media(max-width:768px){
-
 nav{
 padding:15px 20px;
 }
 
 .logo img{
-max-width:60px;
+max-width:120px;
 }
 
 .menu-toggle{
 display:block;
-margin-left:auto;
 }
-
-.menu-toggle{display:block;}
 
 .nav-right{
 position:fixed;
-top:80px;
+top:70px;
 right:-100%;
 width:220px;
-background:#87CEFA;
-padding:25px 20px;
-border-radius:12px 0 0 12px;
+background:#333;
+padding:25px;
 flex-direction:column;
-z-index:1000;
-transition:right 0.3s;
+transition:0.3s;
+border-radius:12px 0 0 12px;
 }
 
-.nav-right.active{right:0;}
+.nav-right.active{
+right:0;
+}
 
 .hero{
 flex-direction:column;
@@ -400,23 +427,31 @@ padding:50px 20px;
 text-align:center;
 }
 
-.hero-text,.hero-img{width:100%;}
+.hero-text,.hero-img{
+width:100%;
+}
 
-.hero-text h1{font-size:32px;}
+.section{
+padding:60px 20px;
+}
 
-.section{padding:60px 20px;}
-
-.logo img{max-width:180px;}
-
+/* FLOAT BUTTONS STACKING */
+.whatsapp{
+bottom:20px;
+}
+.callbtn{
+bottom:80px;
+}
+.float-bookbtn{
+bottom:140px;
+}
 }
 
 </style>
 </head>
-
 <body>
 
 <nav>
-
 <div class="logo">
 <img src="logosmall.png" alt="logo">
 </div>
@@ -431,15 +466,12 @@ text-align:center;
 <div class="phone">📞 8151835253</div>
 <a class="bookbtn" href="#booking">Book Now</a>
 </div>
-
 </nav>
 
 <div class="hero">
-
 <div class="hero-text">
 <h1>Helping Hands For Your Happy Home</h1>
 <p>Support That Feels Like Family.</p>
-
 <div class="service-buttons">
 <div>Maids</div>
 <div>Cooks</div>
@@ -447,27 +479,18 @@ text-align:center;
 <div>Elderly Care</div>
 </div>
 </div>
-
 <div class="hero-img">
-<img src="DS.jpg">
+<img src="DS.jpg" alt="Hero Image">
 </div>
-
 </div>
-
-<!-- BOOKING -->
 
 <div class="section" id="booking">
-
 <div class="booking-box">
-
 <h2>Quick Booking</h2>
-
 <form onsubmit="sendToWhatsapp(); return false;">
-
 <input id="name2" placeholder="Your Name" required>
 <input id="phone2" placeholder="Phone Number" required>
 <input id="location2" placeholder="Your Location" required>
-
 <select id="service2" required>
 <option value="" disabled selected>Service</option>
 <option>Maid</option>
@@ -475,54 +498,41 @@ text-align:center;
 <option>Baby Care</option>
 <option>Elderly Care</option>
 </select>
-
 <textarea id="message2" placeholder="Additional details"></textarea>
-
 <button>Submit Booking</button>
 <p class="callback">⚡ Get a call within 10 minutes</p>
-
 </form>
-
 </div>
-
 </div>
 
 <!-- SERVICES -->
-
 <div class="section" id="services">
 <h2>OUR SERVICES</h2>
-
 <div class="grid">
-
 <div class="card">
 <img src="image1.jpg">
 <h3>Maid Services</h3>
 <p>Our maids bring not just cleanliness, but comfort and peace into your home. They handle daily chores with care and attention, so you can relax and spend time on what truly matters. A clean home is a happy home—and we’re here to make that happen for you.</p>
 </div>
-
 <div class="card">
 <img src="image2.jfif">
 <h3>Cooking Services</h3>
 <p>Enjoy the warmth of home-cooked meals without the stress of cooking every day. Our experienced cooks prepare delicious, hygienic food tailored to your taste and family’s preferences. Because nothing feels better than a lovingly prepared meal at home.</p>
 </div>
-
 <div class="card">
 <img src="baby.jfif">
 <h3>Baby Care</h3>
 <p>Your child deserves gentle, loving, and attentive care at all times. Our trained caregivers treat your little ones like family, ensuring their safety, comfort, and happiness. So you can have peace of mind knowing your baby is in caring hands.</p>
 </div>
-
 <div class="card">
 <img src="ES.jpg">
 <h3>Elderly Care</h3>
 <p>We provide compassionate care that respects the dignity and needs of your loved ones. Our caregivers offer support, companionship, and attention, making everyday life easier and comfortable. Elders deserve the same love and care they’ve always given.</p>
 </div>
-
 </div>
 </div>
 
 <!-- ABOUT -->
-
 <div class="section" id="about">
 <h2>Domestic Services</h2>
 <p>Trusted domestic help across Bangalore including maid, cooking, childcare and elderly care.</p>
@@ -530,7 +540,6 @@ text-align:center;
 </div>
 
 <!-- WHY -->
-
 <div class="why">
 <h2 style="color:#ffffff;">Why Choose Shubh Grihasti?</h2>
 <p>✔ Flexible pricing</p>
@@ -540,10 +549,8 @@ text-align:center;
 </div>
 
 <!-- PROCESS -->
-
 <div class="section">
 <h2>Our Process</h2>
-
 <div class="process-grid">
 <div class="step"><h3>1</h3><p>Submit request</p></div>
 <div class="arrow">→</div>
@@ -554,24 +561,19 @@ text-align:center;
 <div class="step"><h3>4</h3><p>Service starts</p></div>
 <div class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
-
 </div>
 
 <!-- TESTIMONIALS -->
-
 <div class="section">
 <h2>Customer Testimonials</h2>
-
 <div class="testimonial-grid">
 <div class="testimonial"><p>"Very reliable service."</p><h4>- Priya</h4></div>
 <div class="testimonial"><p>"Great cook found quickly."</p><h4>- Rahul</h4></div>
 <div class="testimonial"><p>"Professional team."</p><h4>- Ananya</h4></div>
 </div>
-
 </div>
 
 <!-- CONTACT -->
-
 <div class="contact" id="contact">
 <h2 style="color:#ff3b3b;">Contact Us</h2>
 <p>📞 8151835253</p>
@@ -580,14 +582,14 @@ text-align:center;
 
 <footer>© 2026 ShubhGrihasti</footer>
 
+<!-- FLOATING BUTTONS -->
 <a class="callbtn" href="tel:8151835253">📞</a>
-
 <a class="whatsapp" href="https://wa.me/918151835253" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
+<a class="float-bookbtn" href="#booking">Book Now</a>
 
 <script>
-
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("active");
 }
@@ -607,7 +609,6 @@ var text="New Booking:%0AName: "+name+
 
 window.open("https://wa.me/918151835253?text="+text,'_blank');
 }
-
 </script>
 
 </body>
