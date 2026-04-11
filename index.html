@@ -1,118 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Shubh Grihasti | Maids, Cooks, Babysitters, Elderly Care in Bangalore</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Shubh Grihasti | Maids, Cooks, Babysitters, Elderly Care in Bangalore</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-html { scroll-behavior: smooth; }
-body { margin:0; font-family:'Poppins',sans-serif; background:#fbfbfb; color:#000; }
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family:'Poppins',sans-serif; background:#fbfbfb; color:#000; }
 
-/* NAVBAR */
-nav { display:flex; justify-content:space-between; align-items:center; padding:18px 60px; background:#4a4a4a; border-bottom:2px solid #ff2a2a; }
-nav .nav-left { display:flex; align-items:center; justify-content:space-between; width:100%; max-width:100%; }
-.logo img { max-width:200px; height:auto; }
-.nav-right { display:flex; align-items:center; }
+    /* NAVBAR */
+    nav { display:flex; justify-content:space-between; align-items:center; padding:18px 60px; background:#4a4a4a; border-bottom:2px solid #ff2a2a; }
+    nav .nav-left { display:flex; align-items:center; justify-content:space-between; width:100%; }
+    .logo img { max-width:200px; height:auto; }
+    .nav-right { display:flex; align-items:center; transition: all 0.3s ease; }
 
-/* NAV LINKS */
-nav a { margin-left:25px; text-decoration:none; color:#ffd700; font-weight:600; transition:0.3s; }
-nav a:hover { color:white; }
-.phone { margin-left:25px; color:#ff3b3b; font-weight:600; }
+    /* NAV LINKS */
+    nav a { margin-left:25px; text-decoration:none; color:#ffd700; font-weight:600; transition:0.3s; }
+    nav a:hover { color:white; }
+    .phone { margin-left:25px; color:#ff3b3b; font-weight:600; display:flex; align-items:center; }
+    .bookbtn { background:#ff2a2a; color:white; padding:10px 20px; border-radius:6px; margin-left:25px; text-decoration:none; font-weight:600; transition:0.3s; }
+    .bookbtn:hover { background:#cc0000; transform:scale(1.05); }
 
-/* PULSE ANIMATION */
-@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-.bookbtn { background:#ff2a2a; color:white; padding:10px 20px; border-radius:6px; margin-left:25px; text-decoration:none; font-weight:600; transition:0.3s; animation: pulse 1.5s infinite; }
-.bookbtn:hover { background:#cc0000; transform:scale(1.05); }
+    /* HAMBURGER */
+    .menu-toggle { display:none; font-size:28px; color:#ffd700; cursor:pointer; }
 
-/* HAMBURGER */
-.menu-toggle { display:none; font-size:28px; color:#ffd700; cursor:pointer; }
+    /* HERO */
+    .hero { display:flex; align-items:center; justify-content:space-between; padding:80px 60px; gap:40px; flex-wrap:wrap; }
+    .hero-text { flex:1; min-width:280px; text-align:center; }
+    .hero-text h1 { font-size:42px; color:#0B6623; }
+    .hero-text p { font-size:18px; color:#4a4a4a; margin-bottom:25px; }
+    .service-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; justify-items:center; margin-top:15px; }
+    .service-buttons div { background:#0080FE; color:white; padding:14px 10px; border-radius:12px; text-align:center; font-weight:600; min-width:100px; transition:0.3s; cursor:pointer; }
+    .service-buttons div:hover { background:#0056b3; transform:translateY(-5px); }
 
-/* HERO */
-.hero { display:flex; align-items:center; justify-content:space-between; padding:80px 60px; gap:40px; flex-wrap:wrap; }
-.hero-text { flex:1; min-width:280px; text-align:center; }
-.hero-text h1 { font-size:42px; color:#0B6623; }
-.hero-text p { font-size:18px; color:#4a4a4a; margin-bottom:25px; }
-.service-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; justify-items:center; margin-top:15px; }
-.service-buttons div { background:#0080FE; color:white; padding:14px 10px; border-radius:12px; text-align:center; font-weight:600; min-width:100px; transition:0.3s; cursor:pointer; }
-.service-buttons div:hover { background:#0056b3; transform:translateY(-5px); }
+    /* HERO IMAGE */
+    .hero-img { flex:1; min-width:280px; }
+    .hero-img img { width:100%; height:auto; max-height:500px; object-fit:contain; border-radius:12px; }
 
-/* HERO IMAGE */
-.hero-img { flex:1; min-width:280px; }
-.hero-img img { width:100%; height:auto; max-height:500px; object-fit:contain; border-radius:12px; }
+    /* SECTION */
+    .section { padding:80px 60px; text-align:center; }
+    .section h2 { color:#ff3b3b; font-size:34px; }
 
-/* SECTION */
-.section { padding:80px 60px; text-align:center; }
-.section h2 { color:#ff3b3b; font-size:34px; }
+    /* SERVICES GRID */
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin-top:40px; align-items:stretch; }
+    .card { display:flex; flex-direction:column; background:#111; padding:20px; border-radius:16px; border:1px solid #222; transition:0.3s; height:100%; }
+    .card:hover { transform:translateY(-8px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
+    .card img { width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px; }
+    .card h3 { color:#ffd700; margin-bottom:10px; }
+    .card p { color:white; flex:1; }
 
-/* SERVICES GRID */
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin-top:40px; align-items:stretch; }
-.card { display:flex; flex-direction:column; background:#111; padding:20px; border-radius:16px; border:1px solid #222; transition:0.3s; height:100%; }
-.card:hover { transform:translateY(-8px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
-.card img { width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px; }
-.card h3 { color:#ffd700; margin-bottom:10px; }
-.card p { color:white; flex:1; }
+    /* WHY */
+    .why { background:#0d0d0d; padding:80px 60px; text-align:center; border-radius:12px; }
+    .why p { color:white; font-size:18px; }
 
-/* WHY */
-.why { background:#0d0d0d; padding:80px 60px; text-align:center; border-radius:12px; }
-.why p { color:white; font-size:18px; }
+    /* FORM */
+    .booking-box { background:#000; padding:30px 25px; border-radius:16px; max-width:550px; margin:40px auto; box-shadow:0 0 20px rgba(0,0,0,0.4); box-sizing:border-box; }
+    .booking-box h2 { color:#ff3b3b; margin-bottom:20px; }
+    .booking-box input, .booking-box select, .booking-box textarea { background:#111; color:white; transition:0.3s; }
+    .booking-box input:focus, .booking-box select:focus, .booking-box textarea:focus { outline:none; background:#222; }
+    .booking-box input::placeholder, .booking-box textarea::placeholder { color:#aaa; }
+    .booking-box button { width:100%; margin-top:10px; transition:0.3s; }
+    .booking-box button:hover { background:#cc0000; transform:scale(1.03); }
+    form { max-width:500px; margin:auto; }
+    input, select, textarea { font-family: 'Poppins', sans-serif; width:100%; padding:14px; margin:10px 0; border-radius:6px; border:none; font-size:16px; height:50px; box-sizing:border-box; }
+    textarea { height:100px; }
+    button { background:#ff2a2a; color:white; border:none; padding:14px 25px; border-radius:6px; font-size:16px; cursor:pointer; }
+    .callback { color:#ffffff; margin-top:10px; font-weight:600; animation:glow 1.5s infinite alternate; }
+    @keyframes glow { from{ text-shadow:0 0 5px #ffd700; } to{ text-shadow:0 0 15px #ffd700,0 0 25px #ff2a2a; } }
 
-/* FORM */
-.booking-box { background:#000; padding:30px 25px; border-radius:16px; max-width:550px; margin:40px auto; box-shadow:0 0 20px rgba(0,0,0,0.4); box-sizing:border-box; }
-.booking-box h2 { color:#ff3b3b; margin-bottom:20px; }
-.booking-box input, .booking-box select, .booking-box textarea { background:#111; color:white; transition:0.3s; }
-.booking-box input:focus, .booking-box select:focus, .booking-box textarea:focus { outline:none; background:#222; }
-.booking-box input::placeholder, .booking-box textarea::placeholder { color:#aaa; }
-.booking-box button { width:100%; margin-top:10px; transition:0.3s; }
-.booking-box button:hover { background:#cc0000; transform:scale(1.03); }
-form { max-width:500px; margin:auto; }
-input, select, textarea { font-family: 'Poppins', sans-serif; width:100%; padding:14px; margin:10px 0; border-radius:6px; border:none; font-size:16px; height:50px; box-sizing:border-box; }
-textarea { height:100px; }
-button { background:#ff2a2a; color:white; border:none; padding:14px 25px; border-radius:6px; font-size:16px; cursor:pointer; }
-.callback { color:#ffffff; margin-top:10px; font-weight:600; animation:glow 1.5s infinite alternate; }
-@keyframes glow { from{ text-shadow:0 0 5px #ffd700; } to{ text-shadow:0 0 15px #ffd700,0 0 25px #ff2a2a; } }
+    /* PROCESS */
+    .process-grid { display:flex; align-items:stretch; justify-content:center; flex-wrap:wrap; gap:15px; margin-top:40px; }
+    .step { background:#111; padding:25px; border-radius:16px; width:220px; border:1px solid #222; display:flex; flex-direction:column; justify-content:center; min-height:150px; transition:0.3s; }
+    .step:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.4); }
+    .step h3 { color:#ff2a2a; font-size:28px; margin-bottom:10px; }
+    .step p { color:white; }
 
-/* PROCESS */
-.process-grid { display:flex; align-items:stretch; justify-content:center; flex-wrap:wrap; gap:15px; margin-top:40px; }
-.step { background:#111; padding:25px; border-radius:16px; width:220px; border:1px solid #222; display:flex; flex-direction:column; justify-content:center; min-height:150px; transition:0.3s; }
-.step:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.4); }
-.step h3 { color:#ff2a2a; font-size:28px; margin-bottom:10px; }
-.step p { color:white; }
+    /* TESTIMONIALS */
+    .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:40px; align-items:stretch; }
+    .testimonial { background:#111; padding:25px; border-radius:16px; border:1px solid #222; color:white; text-align:left; display:flex; flex-direction:column; justify-content:space-between; min-height:200px; transition:0.3s; }
+    .testimonial:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.4); }
+    .testimonial h4 { margin-top:15px; color:#ffd700; }
 
-/* TESTIMONIALS */
-.testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:40px; align-items:stretch; }
-.testimonial { background:#111; padding:25px; border-radius:16px; border:1px solid #222; color:white; text-align:left; display:flex; flex-direction:column; justify-content:space-between; min-height:200px; transition:0.3s; }
-.testimonial:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.4); }
-.testimonial h4 { margin-top:15px; color:#ffd700; }
+    /* CONTACT */
+    .contact { text-align:left; padding:80px 60px; background:#4a4a4a; border-radius:12px; line-height:1.6; }
+    .contact h2 { color:#ff3b3b; margin-bottom:15px; }
+    .contact p { color:white; margin:5px 0; }
 
-/* CONTACT */
-.contact { text-align:left; padding:80px 60px; background:#4a4a4a; border-radius:12px; line-height:1.6; }
-.contact h2 { color:#ff3b3b; margin-bottom:15px; }
-.contact p { color:white; margin:5px 0; }
+    /* FOOTER */
+    footer { background:black; color:#ffd700; text-align:center; padding:25px; border-top:2px solid #ff2a2a; border-radius:0 0 12px 12px; }
 
-/* FOOTER */
-footer { background:black; color:#ffd700; text-align:center; padding:25px; border-top:2px solid #ff2a2a; border-radius:0 0 12px 12px; }
+    /* FLOAT BUTTONS */
+    .whatsapp, .callbtn, .float-bookbtn, .go-top { position:fixed; right:20px; width:50px; height:50px; border-radius:50%; z-index:1000; display:flex; align-items:center; justify-content:center; text-decoration:none; color:white; font-size:20px; transition:0.3s; }
+    .whatsapp { bottom:20px; background:#25D366; }
+    .whatsapp img { width:24px; height:24px; }
+    .callbtn { bottom:80px; background:#4da6ff; }
+    .float-bookbtn { bottom:140px; background:#ff2a2a; }
+    .go-top { bottom:200px; background:#ff2a2a; display:none; cursor:pointer; }
 
-/* FLOAT BUTTONS */
-.whatsapp, .callbtn, .float-bookbtn { position:fixed; right:20px; width:50px; height:50px; border-radius:50%; z-index:1000; display:flex; align-items:center; justify-content:center; text-decoration:none; color:white; font-size:20px; transition:0.3s; }
-.whatsapp { bottom:20px; background:#25D366; }
-.whatsapp img { width:24px; height:24px; }
-.callbtn { bottom:80px; background:#4da6ff; }
-.float-bookbtn { bottom:140px; background:#ff2a2a; }
+    /* MOBILE */
+    @media(max-width:768px){
+      nav{ padding:15px 20px; }
+      nav .nav-left{ width:100%; justify-content:space-between; }
+      .logo img{ max-width:160px; }
+      .menu-toggle{ display:block; }
+      .nav-right{ position:fixed; top:70px; right:-300px; width:220px; background:#333; padding:25px; flex-direction:column; transition:0.4s ease; border-radius:12px 0 0 12px; z-index:999; opacity:0; }
+      .nav-right.active{ right:0; opacity:1; }
+      .hero{ flex-direction:column; padding:50px 20px; text-align:center; }
+      .hero-text,.hero-img{ width:100%; }
+      .service-buttons{ grid-template-columns:repeat(2,1fr); gap:10px; justify-items:center; }
+      .section{ padding:60px 20px; }
+    }
 
-/* MOBILE */
-@media(max-width:768px){
-nav{ padding:15px 20px; }
-.menu-toggle{ display:block; }
-.nav-right{ position:fixed; top:70px; right:-100%; width:220px; background:#333; padding:25px; flex-direction:column; transition:0.3s; border-radius:12px 0 0 12px; z-index:999; }
-.nav-right.active{ right:0; }
-.hero{ flex-direction:column; padding:50px 20px; text-align:center; }
-.hero-text,.hero-img{ width:100%; }
-.service-buttons{ grid-template-columns:repeat(2,1fr); gap:10px; justify-items:center; }
-.section{ padding:60px 20px; }
-}
-</style>
+  </style>
 </head>
 
 <body>
@@ -143,7 +144,9 @@ nav{ padding:15px 20px; }
       <div>Elderly Care</div>
     </div>
   </div>
-  <div class="hero-img"><img src="DS.jpg" alt="Hero Image"></div>
+  <div class="hero-img">
+    <img src="DS.jpg" alt="Hero Image">
+  </div>
 </div>
 
 <div class="section" id="booking">
@@ -167,89 +170,103 @@ nav{ padding:15px 20px; }
   </div>
 </div>
 
-<!-- SERVICES -->
 <div class="section" id="services">
-<h2>OUR SERVICES</h2>
-<div class="grid">
-<div class="card"><img src="image1.jpg"><h3>Maid Services</h3><p>Our maids bring not just cleanliness, but comfort and peace into your home...</p></div>
-<div class="card"><img src="image2.jfif"><h3>Cooking Services</h3><p>Enjoy the warmth of home-cooked meals without the stress of cooking every day...</p></div>
-<div class="card"><img src="baby.jfif"><h3>Baby Care</h3><p>Your child deserves gentle, loving, and attentive care at all times...</p></div>
-<div class="card"><img src="ES.jpg"><h3>Elderly Care</h3><p>We provide compassionate care that respects the dignity and needs of your loved ones...</p></div>
-</div>
+  <h2>OUR SERVICES</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="image1.jpg">
+      <h3>Maid Services</h3>
+      <p>Our maids bring not just cleanliness, but comfort and peace into your home. They handle daily chores with care and attention, so you can relax and spend time on what truly matters. A clean home is a happy home—and we’re here to make that happen for you.</p>
+    </div>
+    <div class="card">
+      <img src="image2.jfif">
+      <h3>Cooking Services</h3>
+      <p>Enjoy the warmth of home-cooked meals without the stress of cooking every day. Our experienced cooks prepare delicious, hygienic food tailored to your taste and family’s preferences. Because nothing feels better than a lovingly prepared meal at home.</p>
+    </div>
+    <div class="card">
+      <img src="baby.jfif">
+      <h3>Baby Care</h3>
+      <p>Your child deserves gentle, loving, and attentive care at all times. Our trained caregivers treat your little ones like family, ensuring their safety, comfort, and happiness. So you can have peace of mind knowing your baby is in caring hands.</p>
+    </div>
+    <div class="card">
+      <img src="ES.jpg">
+      <h3>Elderly Care</h3>
+      <p>We provide compassionate care that respects the dignity and needs of your loved ones. Our caregivers offer support, companionship, and attention, making everyday life easier and comfortable. Elders deserve the same love and care they’ve always given.</p>
+    </div>
+  </div>
 </div>
 
-<!-- ABOUT -->
 <div class="section" id="about">
-<h2>About SHUBH GRIHASTI</h2>
-<p>While Shubh Grihasti is a new-age service, it is built on strong industry experience and a deep understanding of household support needs. With over 5 years of hands-on expertise in domestic services, we recognized the need for a more reliable, transparent, and customer-focused approach.</p>
-<p>Our journey began with a simple goal—to make it easier for families to find trained, verified, and dependable support for their homes. Today, we proudly serve households across Bangalore, Chennai, and Hyderabad with services designed around trust, convenience, and quality.</p>
+  <h2>Domestic Services</h2>
+  <p>Trusted domestic help across Bangalore including maid, cooking, childcare and elderly care.</p>
+  <p>Reliable and verified household staff for your home.</p>
 </div>
 
-<!-- WHY -->
 <div class="why">
-<h2 style="color:#ffffff;">Why Choose Shubh Grihasti?</h2>
-<p>✔ Flexible pricing</p>
-<p>✔ Verified staff</p>
-<p>✔ Quick response</p>
-<p>✔ Trusted service</p>
+  <h2 style="color:#ffffff;">Why Choose Shubh Grihasti?</h2>
+  <p>✔ Flexible pricing</p>
+  <p>✔ Verified staff</p>
+  <p>✔ Quick response</p>
+  <p>✔ Trusted service</p>
 </div>
 
-<!-- PROCESS -->
 <div class="section">
-<h2>Our Process</h2>
-<div class="process-grid">
-<div class="step"><h3>1</h3><p>Submit request</p></div>
-<div class="step"><h3>2</h3><p>We call you</p></div>
-<div class="step"><h3>3</h3><p>We match staff</p></div>
-<div class="step"><h3>4</h3><p>Service starts</p></div>
-</div>
+  <h2>Our Process</h2>
+  <div class="process-grid">
+    <div class="step"><h3>1</h3><p>Submit request</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><h3>2</h3><p>We call you</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><h3>3</h3><p>We match staff</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><h3>4</h3><p>Service starts</p></div>
+    <div class="arrow">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  </div>
 </div>
 
-<!-- TESTIMONIALS -->
 <div class="section">
-<h2>Customer Testimonials</h2>
-<div class="testimonial-grid">
-<div class="testimonial"><p>"Very reliable service, arrived on time and very friendly."</p><h4>- Priya</h4></div>
-<div class="testimonial"><p>"Great cook found quickly, meals are delicious and hygienic."</p><h4>- Rahul</h4></div>
-<div class="testimonial"><p>"Professional team, very caring and attentive to our needs."</p><h4>- Ananya</h4></div>
-</div>
+  <h2>Customer Testimonials</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial"><p>"Very reliable service. I’m extremely satisfied with the maids and cooks!"</p><h4>- Priya</h4></div>
+    <div class="testimonial"><p>"Great cook found quickly. Their service was professional and timely!"</p><h4>- Rahul</h4></div>
+    <div class="testimonial"><p>"Professional team. Highly recommend for elderly care!"</p><h4>- Ananya</h4></div>
+  </div>
 </div>
 
-<!-- CONTACT -->
 <div class="contact" id="contact">
-<h2>Contact Us</h2>
-<p>📞 8151835253</p>
-<p>📧 support@shubhgrihasti.com</p>
-<p>🏠 Akshayanagar, Bangalore</p>
+  <h2 style="color:#ff3b3b;">Contact Us</h2>
+  <p>📞 8151835253</p>
+  <p>📧 support@shubhgrihasti.com</p>
+  <p>📍 Akshayanagar, Bangalore</p>
 </div>
 
 <footer>© 2026 ShubhGrihasti</footer>
 
-<!-- FLOATING BUTTONS -->
 <a class="callbtn" href="tel:8151835253">📞</a>
-<a class="whatsapp" href="https://wa.me/918151835253" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+<a class="whatsapp" href="https://wa.me/918151835253" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
 <a class="float-bookbtn" href="#booking">📝</a>
+<a class="go-top" id="goTop" title="Go to top">⬆</a>
 
 <script>
 function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("active");
 }
 
-// Auto close menu when clicking links or scrolling
 document.querySelectorAll('#navMenu a').forEach(function(link){
   link.addEventListener('click', function(){ document.getElementById("navMenu").classList.remove("active"); });
 });
 window.addEventListener('scroll', function(){ document.getElementById("navMenu").classList.remove("active"); });
 
-function sendToWhatsapp(){
-var name=document.getElementById("name2").value;
-var phone=document.getElementById("phone2").value;
-var location=document.getElementById("location2").value;
-var service=document.getElementById("service2").value;
-var message=document.getElementById("message2").value;
-var text="New Booking:%0AName: "+name+"%0APhone: "+phone+"%0ALocation: "+location+"%0AService: "+service+"%0AMessage: "+message;
-window.open("https://wa.me/918151835253?text="+text,'_blank');
+const goTopBtn = document.getElementById("goTop");
+window.onscroll = function(){
+  if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+    goTopBtn.style.display="flex";
+  }else{ goTopBtn.style.display="none"; }
 }
+goTopBtn.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
 </script>
 
 </body>
