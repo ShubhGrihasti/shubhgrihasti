@@ -15,9 +15,12 @@ body { margin:0; font-family:'Poppins',sans-serif; background:#fbfbfb; color:#00
 .fade-in.visible { opacity:1; transform:translateY(0); }
 
 /* NAVBAR */
-nav { display:flex; justify-content:space-between; align-items:center; padding:18px 60px; background:#4a4a4a; border-bottom:2px solid #ff2a2a; flex-wrap:wrap; }
+nav { display:flex; justify-content:space-between; align-items:center; padding:18px 60px; background:#4a4a4a; border-bottom:2px solid #ff2a2a; }
+nav .nav-left { display:flex; align-items:center; justify-content:space-between; width:100%; max-width:100%; }
 .logo img { max-width:200px; height:auto; }
 .nav-right { display:flex; align-items:center; }
+
+/* NAV LINKS */
 nav a { margin-left:25px; text-decoration:none; color:#ffd700; font-weight:600; transition:0.3s; }
 nav a:hover { color:white; }
 .phone { margin-left:25px; color:#ff3b3b; font-weight:600; }
@@ -88,8 +91,9 @@ button { background:#ff2a2a; color:white; border:none; padding:14px 25px; border
 .testimonial h4 { margin-top:15px; color:#ffd700; }
 
 /* CONTACT */
-.contact { text-align:center; padding:80px 60px; background:#4a4a4a; border-radius:12px; }
-.contact p { color:white; }
+.contact { text-align:left; padding:80px 60px; background:#4a4a4a; border-radius:12px; line-height:1.6; }
+.contact h2 { color:#ff3b3b; margin-bottom:15px; }
+.contact p { color:white; margin:5px 0; }
 
 /* FOOTER */
 footer { background:black; color:#ffd700; text-align:center; padding:25px; border-top:2px solid #ff2a2a; border-radius:0 0 12px 12px; }
@@ -101,96 +105,93 @@ footer { background:black; color:#ffd700; text-align:center; padding:25px; borde
 .callbtn { bottom:80px; background:#4da6ff; }
 .float-bookbtn { bottom:140px; background:#ff2a2a; }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
-nav { flex-direction:column; align-items:flex-start; padding:15px 20px; }
-.logo img { max-width:180px; }
-.menu-toggle { display:block; }
-.nav-right { position:fixed; top:60px; right:-100%; width:220px; background:#333; padding:20px; flex-direction:column; transition:0.3s; border-radius:12px 0 0 12px; z-index:999; }
-.nav-right a { margin:10px 0; }
-.nav-right.active { right:0; }
-.hero { flex-direction:column; padding:40px 20px; text-align:center; }
-.hero-text, .hero-img { width:100%; }
-.hero-text h1 { font-size:28px; }
-.hero-text p { font-size:16px; }
-.service-buttons { grid-template-columns:repeat(2,1fr); gap:10px; }
-.section, .why, .contact { padding:40px 20px; }
-.grid, .testimonial-grid { gap:15px; }
-.card img { height:auto; }
-.process-grid { flex-direction:column; gap:20px; }
-.step { width:100%; max-width:300px; margin:auto; }
-.booking-box { padding:25px 15px; margin:20px auto; }
+nav{ padding:15px 20px; }
+nav .nav-left{ width:100%; justify-content:space-between; }
+.logo img{ max-width:160px; }
+.menu-toggle{ display:block; }
+.nav-right{ position:fixed; top:70px; right:-100%; width:220px; background:#333; padding:25px; flex-direction:column; transition:0.3s; border-radius:12px 0 0 12px; }
+.nav-right.active{ right:0; }
+.hero{ flex-direction:column; padding:50px 20px; text-align:center; }
+.hero-text,.hero-img{ width:100%; }
+.section{ padding:60px 20px; }
+.service-buttons{ grid-template-columns:repeat(2,1fr); gap:10px; }
 }
-
 </style>
 </head>
 <body>
 
 <nav>
-<div class="logo"><img src="logosmall.png" alt="logo"></div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<div class="nav-right" id="navMenu">
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-<div class="phone">📞 8151835253</div>
-<a class="bookbtn" href="#booking">Book Now</a>
-</div>
+  <div class="nav-left">
+    <div class="logo"><img src="logosmall.png" alt="logo"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+  <div class="nav-right" id="navMenu">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <div class="phone">📞 8151835253</div>
+    <a class="bookbtn" href="#booking">Book Now</a>
+  </div>
 </nav>
 
-<div class="hero fade-in">
-<div class="hero-text">
-<h1>Helping Hands For Your Happy Home</h1>
-<p>Support That Feels Like Family.</p>
-<div class="service-buttons">
-<div>Maids</div>
-<div>Cooks</div>
-<div>Baby Sitter</div>
-<div>Elderly Care</div>
-</div>
-</div>
-<div class="hero-img"><img src="DS.jpg" alt="Hero Image"></div>
-</div>
-
-<div class="section fade-in" id="booking">
-<div class="booking-box">
-<h2>Quick Booking</h2>
-<form onsubmit="sendToWhatsapp(); return false;">
-<input id="name2" placeholder="Your Name" required>
-<input id="phone2" placeholder="Phone Number" required>
-<input id="location2" placeholder="Your Location" required>
-<select id="service2" required>
-<option value="" disabled selected>Service</option>
-<option>Maid</option>
-<option>Cook</option>
-<option>Baby Care</option>
-<option>Elderly Care</option>
-</select>
-<textarea id="message2" placeholder="Additional details"></textarea>
-<button>Submit Booking</button>
-<p class="callback">⚡ Get a call within 10 minutes</p>
-</form>
-</div>
+<div class="hero">
+  <div class="hero-text">
+    <h1>Helping Hands For Your Happy Home</h1>
+    <p>Support That Feels Like Family.</p>
+    <div class="service-buttons">
+      <div>Maids</div>
+      <div>Cooks</div>
+      <div>Baby Sitter</div>
+      <div>Elderly Care</div>
+    </div>
+  </div>
+  <div class="hero-img"><img src="DS.jpg" alt="Hero Image"></div>
 </div>
 
-<div class="section fade-in" id="services">
+<div class="section" id="booking">
+  <div class="booking-box">
+    <h2>Quick Booking</h2>
+    <form onsubmit="sendToWhatsapp(); return false;">
+      <input id="name2" placeholder="Your Name" required>
+      <input id="phone2" placeholder="Phone Number" required>
+      <input id="location2" placeholder="Your Location" required>
+      <select id="service2" required>
+        <option value="" disabled selected>Service</option>
+        <option>Maid</option>
+        <option>Cook</option>
+        <option>Baby Care</option>
+        <option>Elderly Care</option>
+      </select>
+      <textarea id="message2" placeholder="Additional details"></textarea>
+      <button>Submit Booking</button>
+      <p class="callback">⚡ Get a call within 10 minutes</p>
+    </form>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
 <h2>OUR SERVICES</h2>
 <div class="grid">
-<div class="card"><img src="image1.jpg"><h3>Maid Services</h3><p>Our maids bring not just cleanliness, but comfort and peace into your home. They handle daily chores with care and attention.</p></div>
-<div class="card"><img src="image2.jfif"><h3>Cooking Services</h3><p>Enjoy the warmth of home-cooked meals without the stress of cooking every day. Our experienced cooks prepare delicious, hygienic food tailored to your taste.</p></div>
-<div class="card"><img src="baby.jfif"><h3>Baby Care</h3><p>Your child deserves gentle, loving, and attentive care at all times. Our trained caregivers treat your little ones like family, ensuring safety and comfort.</p></div>
-<div class="card"><img src="ES.jpg"><h3>Elderly Care</h3><p>We provide compassionate care that respects the dignity and needs of your loved ones. Our caregivers offer support, companionship, and attention.</p></div>
+<div class="card"><img src="image1.jpg"><h3>Maid Services</h3><p>Our maids bring not just cleanliness, but comfort and peace into your home...</p></div>
+<div class="card"><img src="image2.jfif"><h3>Cooking Services</h3><p>Enjoy the warmth of home-cooked meals without the stress of cooking every day...</p></div>
+<div class="card"><img src="baby.jfif"><h3>Baby Care</h3><p>Your child deserves gentle, loving, and attentive care at all times...</p></div>
+<div class="card"><img src="ES.jpg"><h3>Elderly Care</h3><p>We provide compassionate care that respects the dignity and needs of your loved ones...</p></div>
 </div>
 </div>
 
-<div class="section fade-in" id="about">
+<!-- ABOUT -->
+<div class="section" id="about">
 <h2>Domestic Services</h2>
 <p>Trusted domestic help across Bangalore including maid, cooking, childcare and elderly care.</p>
 <p>Reliable and verified household staff for your home.</p>
 </div>
 
-<div class="why fade-in">
+<!-- WHY -->
+<div class="why">
 <h2 style="color:#ffffff;">Why Choose Shubh Grihasti?</h2>
 <p>✔ Flexible pricing</p>
 <p>✔ Verified staff</p>
@@ -198,38 +199,38 @@ nav { flex-direction:column; align-items:flex-start; padding:15px 20px; }
 <p>✔ Trusted service</p>
 </div>
 
-<div class="section fade-in">
+<!-- PROCESS -->
+<div class="section">
 <h2>Our Process</h2>
 <div class="process-grid">
 <div class="step"><h3>1</h3><p>Submit request</p></div>
-<div class="arrow">→</div>
 <div class="step"><h3>2</h3><p>We call you</p></div>
-<div class="arrow">→</div>
 <div class="step"><h3>3</h3><p>We match staff</p></div>
-<div class="arrow">→</div>
 <div class="step"><h3>4</h3><p>Service starts</p></div>
 </div>
 </div>
 
-<div class="section fade-in">
+<!-- TESTIMONIALS -->
+<div class="section">
 <h2>Customer Testimonials</h2>
 <div class="testimonial-grid">
-<div class="testimonial"><p>"Very reliable service. The staff was punctual and friendly. Highly recommended!"</p><h4>- Priya</h4></div>
-<div class="testimonial"><p>"Great cook found quickly. Delicious food every day. Made life so easy for us!"</p><h4>- Rahul</h4></div>
-<div class="testimonial"><p>"Professional team. They handled everything smoothly. I am very satisfied."</p><h4>- Ananya</h4></div>
-<div class="testimonial"><p>"Amazing service! Our home has never been cleaner. Thank you, Shubh Grihasti."</p><h4>- Suresh</h4></div>
-<div class="testimonial"><p>"Excellent caregivers for my parents. Compassionate and trustworthy. True peace of mind."</p><h4>- Meera</h4></div>
+<div class="testimonial"><p>"Very reliable service, arrived on time and very friendly."</p><h4>- Priya</h4></div>
+<div class="testimonial"><p>"Great cook found quickly, meals are delicious and hygienic."</p><h4>- Rahul</h4></div>
+<div class="testimonial"><p>"Professional team, very caring and attentive to our needs."</p><h4>- Ananya</h4></div>
 </div>
 </div>
 
-<div class="contact fade-in" id="contact">
-<h2 style="color:#ff3b3b;">Contact Us</h2>
+<!-- CONTACT -->
+<div class="contact" id="contact">
+<h2>Contact Us</h2>
 <p>📞 8151835253</p>
 <p>📧 support@shubhgrihasti.com</p>
+<p>🏠 Akshayanagar, Bangalore</p>
 </div>
 
 <footer>© 2026 ShubhGrihasti</footer>
 
+<!-- FLOATING BUTTONS -->
 <a class="callbtn" href="tel:8151835253">📞</a>
 <a class="whatsapp" href="https://wa.me/918151835253" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
 <a class="float-bookbtn" href="#booking">📝</a>
@@ -245,14 +246,6 @@ var message=document.getElementById("message2").value;
 var text="New Booking:%0AName: "+name+"%0APhone: "+phone+"%0ALocation: "+location+"%0AService: "+service+"%0AMessage: "+message;
 window.open("https://wa.me/918151835253?text="+text,'_blank');
 }
-
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold:0.1, rootMargin:"0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }});
-}, appearOptions);
-faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
 
 </body>
