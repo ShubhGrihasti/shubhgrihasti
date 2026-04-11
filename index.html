@@ -10,14 +10,10 @@
 html { scroll-behavior: smooth; }
 body { margin:0; font-family:'Poppins',sans-serif; background:#fbfbfb; color:#000; }
 
-/* FADE-IN ANIMATION */
-.fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.8s ease-out, transform 0.8s ease-out; }
-.fade-in.visible { opacity:1; transform:translateY(0); }
-
 /* NAVBAR */
 nav { display:flex; justify-content:space-between; align-items:center; padding:18px 60px; background:#4a4a4a; border-bottom:2px solid #ff2a2a; }
 nav .nav-left { display:flex; align-items:center; justify-content:space-between; width:100%; max-width:100%; }
-.logo img { max-width:250px; height:auto; }
+.logo img { max-width:200px; height:auto; }
 .nav-right { display:flex; align-items:center; }
 
 /* NAV LINKS */
@@ -108,18 +104,17 @@ footer { background:black; color:#ffd700; text-align:center; padding:25px; borde
 /* MOBILE */
 @media(max-width:768px){
 nav{ padding:15px 20px; }
-nav .nav-left{ width:100%; justify-content:space-between; }
-.logo img{ max-width:160px; }
 .menu-toggle{ display:block; }
-.nav-right{ position:fixed; top:70px; right:-100%; width:220px; background:#333; padding:25px; flex-direction:column; transition:0.3s; border-radius:12px 0 0 12px; }
+.nav-right{ position:fixed; top:70px; right:-100%; width:220px; background:#333; padding:25px; flex-direction:column; transition:0.3s; border-radius:12px 0 0 12px; z-index:999; }
 .nav-right.active{ right:0; }
 .hero{ flex-direction:column; padding:50px 20px; text-align:center; }
 .hero-text,.hero-img{ width:100%; }
+.service-buttons{ grid-template-columns:repeat(2,1fr); gap:10px; justify-items:center; }
 .section{ padding:60px 20px; }
-.service-buttons{ grid-template-columns:repeat(2,1fr); gap:10px; }
 }
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -187,8 +182,7 @@ nav .nav-left{ width:100%; justify-content:space-between; }
 <div class="section" id="about">
 <h2>About SHUBH GRIHASTI</h2>
 <p>While Shubh Grihasti is a new-age service, it is built on strong industry experience and a deep understanding of household support needs. With over 5 years of hands-on expertise in domestic services, we recognized the need for a more reliable, transparent, and customer-focused approach.</p>
-<p>
-Our journey began with a simple goal—to make it easier for families to find trained, verified, and dependable support for their homes. Today, we proudly serve households across Bangalore, Chennai, and Hyderabad with services designed around trust, convenience, and quality.</p>
+<p>Our journey began with a simple goal—to make it easier for families to find trained, verified, and dependable support for their homes. Today, we proudly serve households across Bangalore, Chennai, and Hyderabad with services designed around trust, convenience, and quality.</p>
 </div>
 
 <!-- WHY -->
@@ -237,7 +231,16 @@ Our journey began with a simple goal—to make it easier for families to find tr
 <a class="float-bookbtn" href="#booking">📝</a>
 
 <script>
-function toggleMenu(){ document.getElementById("navMenu").classList.toggle("active"); }
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+// Auto close menu when clicking links or scrolling
+document.querySelectorAll('#navMenu a').forEach(function(link){
+  link.addEventListener('click', function(){ document.getElementById("navMenu").classList.remove("active"); });
+});
+window.addEventListener('scroll', function(){ document.getElementById("navMenu").classList.remove("active"); });
+
 function sendToWhatsapp(){
 var name=document.getElementById("name2").value;
 var phone=document.getElementById("phone2").value;
